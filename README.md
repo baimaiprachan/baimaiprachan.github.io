@@ -1,28 +1,28 @@
-# [Start Bootstrap - Business Frontpage](https://startbootstrap.com/template-overviews/business-frontpage/)
+# [Start Bootstrap - Landing Page](https://startbootstrap.com/template-overviews/landing-page/)
 
-[Business Frontpage](http://startbootstrap.com/template-overviews/business-frontpage/) is a basic business website template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+[Landing Page](http://startbootstrap.com/template-overviews/landing-page/) is a multipurpose landing page template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
 ## Preview
 
-[![Business Frontpage Preview](https://startbootstrap.com/assets/img/templates/business-frontpage.jpg)](https://blackrockdigital.github.io/startbootstrap-business-frontpage/)
+[![Landing Page Preview](https://startbootstrap.com/assets/img/templates/landing-page.jpg)](https://blackrockdigital.github.io/startbootstrap-landing-page/)
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-business-frontpage/)**
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-landing-page/)**
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-business-frontpage/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-business-frontpage.svg)](https://www.npmjs.com/package/startbootstrap-business-frontpage)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-business-frontpage.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-business-frontpage)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage?type=dev)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-landing-page/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-landing-page.svg)](https://www.npmjs.com/package/startbootstrap-landing-page)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-landing-page.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-landing-page)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-landing-page/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-landing-page)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-landing-page/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-landing-page?type=dev)
 
 ## Download and Installation
 
 To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/business-frontpage/)
-* Install via npm: `npm i startbootstrap-business-frontpage`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-business-frontpage.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-business-frontpage)
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/landing-page/)
+* Install via npm: `npm i startbootstrap-landing-page`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-landing-page.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-landing-page)
 
 ## Usage
 
@@ -36,7 +36,7 @@ After installation, run `npm install` and then run `gulp dev` which will open up
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-business-frontpage/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/business-frontpage/).
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-landing-page/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/).
 
 ## Custom Builds
 
@@ -59,4 +59,4 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 
 ## Copyright and License
 
-Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/gh-pages/LICENSE) license.
+Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/gh-pages/LICENSE) license.
