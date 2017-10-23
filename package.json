@@ -1,0 +1,48 @@
+{
+  "title": "Business Frontpage",
+  "name": "startbootstrap-business-frontpage",
+  "version": "4.0.0-beta.2",
+  "description": "A simple business HTML landing page built with Bootstrap",
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template"
+  ],
+  "homepage": "https://startbootstrap.com/template-overviews/business-frontpage",
+  "bugs": {
+    "url": "https://github.com/BlackrockDigital/startbootstrap-business-frontpage/issues",
+    "email": "feedback@startbootstrap.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Start Bootstrap"
+  },
+  "contributors": [
+    {
+      "name": "David Miller",
+      "url": "http://davidmiller.io/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlackrockDigital/startbootstrap-business-frontpage.git"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.13",
+    "gulp": "^3.9.1"
+  },
+  "readme": "# [Start Bootstrap - Business Frontpage](https://startbootstrap.com/template-overviews/business-frontpage/)\n\n[Business Frontpage](http://startbootstrap.com/template-overviews/business-frontpage/) is a basic business website template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).\n\n## Preview\n\n[![Business Frontpage Preview](https://startbootstrap.com/assets/img/templates/business-frontpage.jpg)](https://blackrockdigital.github.io/startbootstrap-business-frontpage/)\n\n**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-business-frontpage/)**\n\n## Status\n\n[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-business-frontpage/master/LICENSE)\n[![npm version](https://img.shields.io/npm/v/startbootstrap-business-frontpage.svg)](https://www.npmjs.com/package/startbootstrap-business-frontpage)\n[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-business-frontpage.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-business-frontpage)\n[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage)\n[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage?type=dev)\n\n## Download and Installation\n\nTo begin using this template, choose one of the following options to get started:\n* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/business-frontpage/)\n* Install via npm: `npm i startbootstrap-business-frontpage`\n* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-business-frontpage.git`\n* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-business-frontpage)\n\n## Usage\n\n### Basic Usage\n\nAfter downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.\n\n### Advanced Usage\n\nAfter installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.\n\n## Bugs and Issues\n\nHave a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-business-frontpage/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/business-frontpage/).\n\n## Custom Builds\n\nYou can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.\n\n## About\n\nStart Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.\n\n* https://startbootstrap.com\n* https://twitter.com/SBootstrap\n\nStart Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).\n\n* http://davidmiller.io\n* https://twitter.com/davidmillerskt\n* https://github.com/davidtmiller\n\nStart Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).\n\n## Copyright and License\n\nCopyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/gh-pages/LICENSE) license.\n",
+  "readmeFilename": "README.md",
+  "_id": "startbootstrap-business-frontpage@4.0.0-beta.2",
+  "dist": {
+    "shasum": "6218779bf04a592131569732ac1e4d07639dbeab"
+  },
+  "_from": "startbootstrap-business-frontpage-gh-pages"
+}

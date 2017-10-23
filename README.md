@@ -1,69 +1,62 @@
-# Jekyll Cayman theme
+# [Start Bootstrap - Business Frontpage](https://startbootstrap.com/template-overviews/business-frontpage/)
 
-This is a [Jekyll][1] theme for [@jasonlong][2]'s [Cayman theme][4] on [GitHub Pages][3].
+[Business Frontpage](http://startbootstrap.com/template-overviews/business-frontpage/) is a basic business website template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
-Cayman is a clean, responsive theme for [GitHub Pages](https://pages.github.com). This theme is available as an option if you use the [Automatic Page Generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator/) or you can copy the template and styles to use on your own.
+## Preview
 
-You can preview the theme at http://jasonlong.github.io/cayman-theme or with real content at http://jasonlong.github.io/geo_pattern.
+[![Business Frontpage Preview](https://startbootstrap.com/assets/img/templates/business-frontpage.jpg)](https://blackrockdigital.github.io/startbootstrap-business-frontpage/)
 
-![](http://cl.ly/image/1T3r3d18311V/content)
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-business-frontpage/)**
 
-# How to use it?
+## Status
 
-Download the theme @ http://github.com/pietromenna/jekyll-cayman-theme/archive/master.zip
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-business-frontpage/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-business-frontpage.svg)](https://www.npmjs.com/package/startbootstrap-business-frontpage)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-business-frontpage.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-business-frontpage)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-business-frontpage?type=dev)
 
-Unzip it and use it as a regular jekyll folder.
+## Download and Installation
 
-```
-$ unzip jekyll-cayman-theme-master.zip
-```
+To begin using this template, choose one of the following options to get started:
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/business-frontpage/)
+* Install via npm: `npm i startbootstrap-business-frontpage`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-business-frontpage.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-business-frontpage)
 
-Get inside the newly extracted folder
-```
-$ cd jekyll-cayman-theme-master
-```
+## Usage
 
-Get the required gems
-```
-$ bundle install
-```
+### Basic Usage
 
-Use it!
+After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-```
-$ jekyll serve
-```
+### Advanced Usage
 
-For more details read about [Jekyll][1] on its web page.
+After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
 
-# Setup
+## Bugs and Issues
 
-Some important configuration can be done in the file `_config.yml`. Please, check the Setup section in that file.
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-business-frontpage/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/business-frontpage/).
 
+## Custom Builds
 
-## baseurl
+You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
 
-`baseurl` parameter is required in the case the site doesn't sit on the root of the domain. For example: http://pietromenna.github.io/jekyll-cayman-theme
+## About
 
-In the case above the baseurl should be set to "/jekyll-cayman-theme".
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-In the case the site sits in the root, you can leave `baseurl` as empty "".
+* https://startbootstrap.com
+* https://twitter.com/SBootstrap
 
-# Contributing
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/pietromenn/jekyll-cayman-theme.
+* http://davidmiller.io
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
 
-# Development
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-To set up your environment to develop this theme, run `bundle install`.
+## Copyright and License
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-# License
-
-This work is licensed under a [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/) license.
-
-[1]: http://jekyllrb.com/
-[2]: https://github.com/jasonlong
-[3]: http://pages.github.com/
-[4]: https://github.com/jasonlong/cayman-theme
+Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/gh-pages/LICENSE) license.
