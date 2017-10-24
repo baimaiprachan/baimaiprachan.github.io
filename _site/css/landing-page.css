@@ -25,10 +25,10 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .img-circle {
-    border-radius: 40%;
+    border-radius: 50%;
     width: auto;
     height: 200px;
-    border: 1px solid #ddd;
+    border: 3px solid #000;
 }
 
 .intro-message {
@@ -108,7 +108,7 @@ body, h1, h2, h3, h4, h5, h6 {
 .banner {
   padding: 100px 0;
   color: #f8f8f8;
-  background: url(../img/banner-bg.jpg) no-repeat center center;
+  background: url(../img/f4bea9.png) no-repeat center center;
   background-size: cover;
 }
 
