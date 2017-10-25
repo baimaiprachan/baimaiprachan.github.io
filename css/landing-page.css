@@ -20,6 +20,20 @@ body, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+#phone-number {
+  color: white;
+}
+
+#left {
+  float: left;
+  text-align: left;
+}
+
+#right {
+  float: right;
+  text-align: right;
+}
+
 fieldset {
 	border: medium none !important;
 	margin: 0 0 10px;
