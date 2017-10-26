@@ -34,6 +34,11 @@ body, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
+.nav-item:hover {
+  cursor: pointer;
+  background-color: #cecece;
+}
+
 fieldset {
 	border: medium none !important;
 	margin: 0 0 10px;
@@ -107,7 +112,7 @@ fieldset {
   text-align: center;
   color: #f8f8f8;
   background: url(../img/เมี่ยงกลีบบัว2.jpg) no-repeat center center;
-  background-size: cover;
+  background-size: cover;  
 }
 
 .img-circle {
@@ -148,6 +153,11 @@ fieldset {
 .btn {
   background-color: #D5E4AC !important;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6)
+}
+
+.btn:hover {
+  box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  background-color: #a1ad82 !important;
 }
 
 @media(max-width:767px) {
