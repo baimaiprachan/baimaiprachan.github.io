@@ -15,9 +15,36 @@ h1 {
 }
 
 body, h2, h3, h4, h5, h6 {
-/*  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-family: "Athiti", "Helvetica Neue", serif;
   font-weight: 700;
+}
+
+/* Add padding BETWEEN each column
+.row,
+.row > .column {
+    padding: 8px;
+}
+/* Create four equal columns that floats next to each other */
+.column {
+    width: 33%;
+    padding: 8px;
+}
+.column-full {
+    width: 100%;
+    padding: 8px;
+}
+.content {
+    background-color: #FCFBE3;
+    padding: 10px;
+    border-color: #f8f8f8;
+    border-width: 2px;
+}
+.content:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.img-fluid {
+  width: 100%;
 }
 
 #phone-number {
@@ -34,9 +61,15 @@ body, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
+.navbar {
+  z-index: 1;
+}
+
 .nav-item:hover {
   cursor: pointer;
   background-color: #cecece;
+  border-top-right-radius: 13px;
+  border-bottom-left-radius: 13px;
 }
 
 fieldset {
@@ -63,7 +96,7 @@ fieldset {
 }
 
 #contact textarea {
-	height:100px;
+	height:180px;
 	max-width:100%;
   resize:none;
 }
@@ -106,13 +139,26 @@ fieldset {
  color:#888;
 }
 
+.container-gallery {
+    text-align: center;
+    color: black;
+    background-color: #FCFBE3;
+    background-size: cover;
+    width: 100%;
+    margin:0;
+  }
+.carousel-inner {
+   position: relative;
+   width: 100%; /* for IE 6 */
+  }
+
 .intro-header {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
   color: #f8f8f8;
   background: url(../img/เมี่ยงกลีบบัว2.jpg) no-repeat center center;
-  background-size: cover;  
+  background-size: cover;
 }
 
 .img-circle {
@@ -178,6 +224,9 @@ fieldset {
   .intro-divider {
     width: 100%;
   }
+  .column {
+      width: 100%;
+  }
 }
 
 .network-name {
@@ -190,7 +239,7 @@ fieldset {
 
 .content-section-a {
   padding: 50px 0;
-  background-color: #FCFBE3;
+  background-color: white;
   text-align: right;
 }
 
@@ -270,6 +319,9 @@ fieldset {
     float: left;
     margin-top: 15px;
   }
+  .column {
+    width: 50%;
+  }
 }
 
 @media(max-width:767px) {
@@ -286,6 +338,9 @@ fieldset {
   ul.banner-social-buttons>li:last-child {
     margin-bottom: 0;
   }
+  .column {
+    width: 100%;
+  }
 }
 
 footer {
@@ -296,3 +351,85 @@ footer {
 p.copyright {
   margin: 15px 0 0;
 }
+
+
+/* Modal image*/
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  overflow: hidden;
+  background-color:rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  padding: 0px;
+  width: auto;
+  max-width: 1200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* End modal image */

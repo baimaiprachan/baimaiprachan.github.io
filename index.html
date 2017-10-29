@@ -15,14 +15,12 @@
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Athiti|Chonburi|Itim|Kanit|Maitree|Mitr|Pattaya|Pridi|Prompt|Sriracha|Taviraj|Trirong" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Athiti|Prompt" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/landing-page.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="responsiveslides.min.js"></script>
 
     <script>
     $(document).ready(function(){
@@ -48,8 +46,12 @@
       });
       $("#contact-btn").click(function() {
           $('html, body').animate({
-              scrollTop: $("#contact").offset().top-50
+              scrollTop: $("#contact-anchor").offset().top-50
           }, 500);
+      });
+
+      $('.single-item').slick({
+        dots: true
       });
     });
     </script>
@@ -101,13 +103,13 @@
           </h3>
           <ul class="list-inline intro-social-buttons">
             <li class="list-inline-item">
-              <a href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/" class="btn btn-secondary btn-lg">
+              <a href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/" class="btn btn-secondary btn-lg" target="_blank">
                 <i class="fa fa-facebook fa-fw"></i>
                 <span class="network-name">Facebook</span>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://www.instagram.com/baimaiprachan/" class="btn btn-secondary btn-lg">
+              <a href="https://www.instagram.com/baimaiprachan/" class="btn btn-secondary btn-lg" target="_blank">
                 <i class="fa fa-instagram fa-fw"></i>
                 <span class="network-name">Instagram</span>
               </a>
@@ -124,15 +126,13 @@
     </header>
 </section>
 
-
-
     <!-- Page Content -->
 <!--    <section class="content-section-a"> -->
   <section id="about" class="content-section-a">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 ml-auto">
-            <h2 class="section-heading">ร้านใบไม้พระจันทร์<br>ที่ เวนิสชอปปิ้ง พลาซ่า</h2>
+            <h2 class="section-heading">ร้านใบไม้พระจันทร์<br>ย่าน วัชรพล รามอินทรา</h2>
             <hr class="section-heading-spacer-r">
             <div class="clearfix"></div>
             <p class="lead">เป็นร้านโดยคนรักอาหาร สำหรับคนรักอาหาร โดยเฉพาะของว่างและขนมไทยโบราณ
@@ -156,6 +156,7 @@
             <div class="clearfix"></div>
             <p class="lead">
               ราคาเริ่มต้นที่ 180 บาท/ท่าน + ค่ายานพาหนะ
+              สำหรับแขก 50 ท่าน
             </p>
             <p class="lead">
               รวมอาหารคาว 5 รายการ อาหารหวาน 1 รายการ
@@ -167,7 +168,7 @@
             </p>
           </div>
           <div class="col-lg-5 ml-auto order-lg-1">
-            <img class="img-fluid" src="img/buffet_tables.jpg" alt="">
+            <img class="img-fluid" src="img/buffet_tables_outside.jpg" alt="">
           </div>
         </div>
       </div>
@@ -179,19 +180,23 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-5 ml-auto">
-            <h2 class="section-heading">จัดเลี้ยงอาหารกล่องนอกสถานที่</h2>
+            <h2 class="section-heading">รายการอาหารจัดเลี้ยง</h2>
             <hr class="section-heading-spacer-r">
             <div class="clearfix"></div>
             <p class="lead">
-              ราคาเริ่มต้นที่ 180 บาท/ท่าน + ค่ายานพาหนะ
+              <h3>รายการ 1</h3>
             </p>
             <p class="lead">
-              รวมอาหารคาว 5 รายการ อาหารหวาน 1 รายการ
-              ข้าวสวย ขนมจีน น้ำเปล่า
-              และพนักงานบริการ
-      ​            </p>
+              <h3>รายการ 2</h3>
+            </p>
             <p class="lead">
-              ดูเมนูจัดเลี้ยง
+              <h3>รายการ 3</h3>
+            </p>
+            <p class="lead">
+              <h3>รายการ 4</h3>
+            </p>
+            <p class="lead">
+              <h3>รายการ 5</h3>
             </p>
           </div>
           <div class="col-lg-5 mr-auto ">
@@ -233,8 +238,7 @@
             </p>
           </div>
           <div class="col-lg-5 ml-auto order-lg-1">
-            <img class="img-fluid" src="img/restaurant1.jpg" alt="">
-            <img class="img-fluid" src="img/restaurant3.jpg" alt="">
+            <img class="img-fluid" src="img/restaurant.png" alt="">
           </div>
         </div>
       </div>
@@ -245,23 +249,52 @@
     <section id="gallery" class="content-section-a">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5 ml-auto">
-            <h2 class="section-heading">รูป</h2>
-            <hr class="section-heading-spacer-r">
-            <div class="clearfix"></div>
-            <p class="lead">
-              ราคาเริ่มต้นที่ 180 บาท/ท่าน + ค่ายานพาหนะ
-            </p>
+          <div class="column">
+            <div class="content" onclick="openModal();currentSlide(1)">
+            <img src="img/แกงรัญจวน.jpg" alt="แกงรัญจวน" style="width:100%">
+              <h3>อาหารคาว</h3>
+            </div>
           </div>
-          <div class="col-lg-5 mr-auto ">
-            <img class="img-fluid" src="img/ข้าวเหนียวหน้ากุ้ง2.jpg" alt="">
+          <div class="column">
+            <div class="content">
+            <img src="img/LemonMeringuePie.jpg" alt="Lemon Meringue Pie" style="width:100%">
+              <h3>ของหวาน</h3>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <img src="img/ข้าวเหนียวหน้ากุ้ง.jpg" alt="ข้าวเหนียวหน้ากุ้ง" style="width:100%">
+              <h3>จัดเลี้ยงนอกสถานที่</h3>
+            </div>
           </div>
         </div>
       </div>
       <!-- /.container -->
     </section>
 
-    <section id="contact">
+<!-- Modal image-->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <div class="mySlides">
+        <img src="img/ข้าวเหนียวสังขยาข้าวเหนียวหน้ากุ้ง.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="img/แกงส้ม2.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="img/ข้าวเหนียวมะม่วง.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="img/ไข่ตุ๋นญี่ปุ่น2.jpg" style="width:100%">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+<!-- -->
+
+    <section id="contact-anchor">
       <aside class="banner">
         <div class="container">
           <div class="row">
@@ -272,6 +305,7 @@
               <h3>ติดต่อเรา:</h3>
               <div id="left" class="col-lg-6 my-auto order-lg-1">
                 <p>
+                  ร้านใบไม้พระจันทร์<br>
                   1/224 โครงการเวนิส ดิไอริส วัชรพล<br>
                   ซอยวัชรพล 2/8 ท่าแรง บางเขน<br>
                   กทม 10220
@@ -281,7 +315,8 @@
                 <p>
                   โทร. <a color="black" href="tel:+6620241480">02-024 1480</a><br>
                   หรือ <a color="black" href="tel:+66922674722">092-267-4722</a><br>
-                  <i class="fa fa-envelope fa-fw"></i> <a href="mailto:info.baimaiprachan@gmail.com">info.baimaiprachan@gmail.com</a>
+                  <i class="fa fa-envelope fa-fw"></i> <a href="mailto:info.baimaiprachan@gmail.com">info.baimaiprachan@gmail.com</a><br>
+                  <i class="fa fa-facebook fa-fw"></i> <a href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/">ใบไม้พระจันทร์ ที่ เวนิสวัชรพล</a>
                 </p>
               </div>
             </div>
@@ -307,23 +342,7 @@
                   </fieldset>
                 </form>
               </div>
-    <!-- -->
-              <ul class="list-inline banner-social-buttons">
-                <li class="list-inline-item">
-                  <a href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/" class="btn btn-secondary btn-lg">
-                    <i class="fa fa-facebook fa-fw"></i>
-                    <span class="network-name">Facebook</span>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://www.instagram.com/baimaiprachan/" class="btn btn-secondary btn-lg">
-                    <i class="fa fa-instagram fa-fw"></i>
-                    <span class="network-name">Instagram</span>
-                  </a>
-                </li>
-              </ul>
             </div>
-
           </div>
         </div>
         <!-- /.container -->
@@ -356,7 +375,7 @@
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">
-            <a href="#contact">ติดต่อเรา</a>
+            <a href="#contact-anchor">ติดต่อเรา</a>
           </li>
         </ul>
         <p class="copyright text-muted small">Copyright &copy; Baimaiprachan 2017. All Rights Reserved</p>
@@ -366,6 +385,39 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function openModal() {
+        document.getElementById('myModal').style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
 
   </body>
 
