@@ -51,6 +51,16 @@ make it possible to print/download menu
               scrollTop: $("#catering-buffet").offset().top-50
           }, 500);
       });
+      $("#mains-btn").click(function() {
+          $('html, body').animate({
+              scrollTop: $("#mains").offset().top-50
+          }, 500);
+      });
+      $("#desserts-btn").click(function() {
+          $('html, body').animate({
+              scrollTop: $("#desserts").offset().top-50
+          }, 500);
+      });
       $("#restaurant-btn").click(function() {
           $('html, body').animate({
               scrollTop: $("#restaurant").offset().top-50
@@ -91,15 +101,12 @@ make it possible to print/download menu
             <li class="nav-item">
               <a class="nav-link" id="catering-buffet-btn">จัดเลี้ยง</a>
             </li>
-<!--            <li class="nav-item dropdown">
-              <div class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-              aria-haspopup="true" aria-expanded="false" href="#catering-buffet">จัดเลี้ยง
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" id="main-courses-btn">อาหารคาว</a>
-                  <a class="dropdown-item" id="desserts-btn">ของหวาน</a>
-                </div>
-              </div>
-            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" id="mains-btn">อาหารคาว</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="desserts-btn">ของหวาน</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" id="restaurant-btn">ร้านอาหาร</a>
             </li>
@@ -264,10 +271,10 @@ make it possible to print/download menu
     </section>
   -->
 
-    <section id="main-courses" class="content-section-a">
+    <section id="mains" class="content-section-a">
       <div class="container">
         <div class="col-lg-12 ml-auto"  align="center">
-          <h2 class="section-heading">รายการอาหารจัดเลี้ยง</h2>
+          <h2 class="section-heading">รายการอาหารคาว</h2>
           <hr class="section-heading-spacer-c" style="width: 300px;">
           <div class="clearfix"></div>
         </div>
@@ -484,7 +491,7 @@ make it possible to print/download menu
 
     <section id="desserts" class="content-section-b">
       <div class="container">
-        <h2 align="center">ของหวาน</h2>
+        <h2 align="center">รายการของหวาน</h2>
         <hr class="section-heading-spacer-c" style="width: 200px;">
         <hr style="width: 0px">
         <div class="col-lg-7" align="center" style="margin: auto;">
@@ -565,7 +572,8 @@ make it possible to print/download menu
     </section>
     <!-- /.content-section-b -->
 
-    <section id="restaurant" class="content-section-a">
+<!--
+    <section class="content-section-a">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 ml-auto">
@@ -573,8 +581,9 @@ make it possible to print/download menu
         </div>
       </div>
     </section>
+-->
 
-    <section id="restaurant" class="content-section-b">
+    <section id="restaurant" class="content-section-a">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 mr-auto order-lg-2">
@@ -612,7 +621,7 @@ make it possible to print/download menu
     </section>
     <!-- /.content-section-a -->
 
-    <section id="gallery" class="content-section-a">
+    <section id="gallery" class="content-section-b">
       <div class="container">
         <div class="row">
           <div class="column">
@@ -732,6 +741,12 @@ make it possible to print/download menu
             <li class="list-inline-item">
               <a href="#catering-buffet">จัดเลี้ยง</a>
             </li>
+            <li class="list-inline-item">
+              <a href="#mains">อาหารคาว</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#desserts">ของหวาน</a>
+            </li>
             <li class="footer-menu-divider list-inline-item">&sdot;</li>
             <li class="list-inline-item">
               <a href="#restaurant">ร้านอาหาร</a>
@@ -739,10 +754,6 @@ make it possible to print/download menu
             <li class="footer-menu-divider list-inline-item">&sdot;</li>
             <li class="list-inline-item">
               <a href="#gallery">ดูรูป</a>
-            </li>
-            <li class="footer-menu-divider list-inline-item">&sdot;</li>
-            <li class="list-inline-item">
-              <a href="#contact-anchor">ติดต่อเรา</a>
             </li>
           </ul>
           <p class="copyright text-muted small">Copyright &copy; Baimaiprachan 2017. All Rights Reserved</p>
@@ -758,15 +769,15 @@ make it possible to print/download menu
           </div>
           <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
           <div class="box">
-          <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FBaimaiPrachanVeniceWatcharaphol%2F&width=125&layout=button_count&action=like&size=small&show_faces=false&share=true&height=46&appId=119989415323780"
-            width="125"
-            height="46"
-            style="border:none;overflow:hidden"
-            scrolling="no"
-            frameborder="0"
-            allowTransparency="true">
-          </iframe>
-        </div>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FBaimaiPrachanVeniceWatcharaphol%2F&width=125&layout=button_count&action=like&size=small&show_faces=false&share=true&height=46&appId=119989415323780"
+              width="125"
+              height="46"
+              style="border:none;overflow:hidden"
+              scrolling="no"
+              frameborder="0"
+              allowTransparency="true">
+            </iframe>
+          </div>
           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
           class="twitter-share-button"
           data-url="https://baimaiprachan.github.io/"

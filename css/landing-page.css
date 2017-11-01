@@ -231,7 +231,7 @@ fieldset {
 
 .box{
     float:left;
-    margin-right:3px;
+    margin-right:5px;
 }
 .clear{
     clear:both;
@@ -285,7 +285,7 @@ fieldset {
 .banner {
   padding: 50px 0;
   color: black;
-  background: url(../img/f4bea9.png) no-repeat center center;
+  background: #f4bea9;
   background-size: cover;
 }
 
