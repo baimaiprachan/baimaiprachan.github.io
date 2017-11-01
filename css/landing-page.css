@@ -229,6 +229,14 @@ fieldset {
   }
 }
 
+.box{
+    float:left;
+    margin-right:3px;
+}
+.clear{
+    clear:both;
+}
+
 .network-name {
   text-transform: uppercase;
   font-size: 14px;

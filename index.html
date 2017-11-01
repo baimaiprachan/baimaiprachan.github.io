@@ -7,7 +7,6 @@ Lunch meetings
 ขึ้นบ้านใหม่
 
 make it possible to print/download menu
-Line button + Facebook
 -->
 <html lang="en">
 
@@ -754,32 +753,29 @@ Line button + Facebook
           <div class="line-it-button"
             style="display: inline; width: 72px; height: 28px;"
             data-lang="en"
-            data-type="share-c"
+            data-type="share-a"
             data-url="https://baimaiprachan.github.io/">
           </div>
           <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
-
-          <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FBaimaiPrachanVeniceWatcharaphol%2F&width=125&layout=button_count&action=like&size=small&show_faces=false&share=true&height=46&appId=119989415323780"
-            width="125"
-            height="46"
-            style="border:none;overflow:hidden"
-            scrolling="no"
-            frameborder="0"
-            allowTransparency="true">
-          </iframe>
-
-          <a class="twitter-share-button"
-            href="https://twitter.com/share"
-            data-size="small"
-            data-text="จัดเลี้ยงกับร้านใบไม้พระจันทร์"
-            data-url="https://baimaiprachan.github.io"
-            data-hashtags="อิ่มจัง,ขนมอร่อย"
-            data-via="baimaiprachan"
-            data-related="จัดเลี้ยง,twitter">
-          Tweet
-          </a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+          <div class="box">
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FBaimaiPrachanVeniceWatcharaphol%2F&width=125&layout=button_count&action=like&size=small&show_faces=false&share=true&height=46&appId=119989415323780"
+              width="125"
+              height="46"
+              style="border:none;overflow:hidden"
+              scrolling="no"
+              frameborder="0"
+              allowTransparency="true">
+            </iframe>
+          </div>
+          <div class="box">
+            <iframe id="tweet-button"
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="no"
+              src="http://platform.twitter.com/widgets/tweet_button.html?url=https%3A%2F%2Fbaimaiprachan.github.io%2F&via=baimaiprachan&amp;count=horizontal"
+              style="width:110px; height:20px;">
+            </iframe>
+          </div>
         </div>
       </div>
     </footer>
