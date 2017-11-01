@@ -18,10 +18,12 @@ Line button + Facebook
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@baimaiprachan" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/baimaiprachan/baimaiprachan.github.io/master/img/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A72.jpg" />
+
     <meta property="og:url" content="http://baimaiprachan.github.io/" />
     <meta property="og:title" content="ใบไม้พระจันทร์ - จัดเลี้ยงนอกสถานที่" />
     <meta property="og:description" content="บุฟเฟต์ไทย จีน ฝรั่ง ของว่าง คาว และขนม ประณีต อร่อยและไม่ใส่สารเคมี เริ่มต้นที่ 180 บาทต่อท่าน เชิญชิมอาหารได้ในร้านย่านวัชรพล" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/baimaiprachan/baimaiprachan.github.io/master/img/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A72.jpg" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/baimaiprachan/baimaiprachan.github.io/master/img/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A72.jpg" />
 
     <title>ใบไม้พระจันทร์ - จัดเลี้ยงนอกสถานที่</title>
 
@@ -35,7 +37,7 @@ Line button + Facebook
     <!-- Custom styles for this template -->
     <link href="css/landing-page.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script>
@@ -74,6 +76,14 @@ Line button + Facebook
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=119989415323780';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -479,13 +489,15 @@ Line button + Facebook
         </div>
       </div>
     </section>
-    <section id="desserts">
+
+
+    <section id="desserts" class="content-section-b">
       <div class="container">
         <h2 align="center">ของหวาน</h2>
         <hr class="section-heading-spacer-c" style="width: 200px;">
         <hr style="width: 0px">
         <div class="col-lg-7" align="center" style="margin: auto;">
-          <h3>ขนมหวานน้ำ (1 ชนิด)</h3>
+          <h3>ขนมน้ำ - ไทย (1 ชนิด)</h3>
           <div class="row">
             <div class="col">
               <p class="lead">
@@ -494,21 +506,17 @@ Line button + Facebook
               ขนมโคกะทิ <br>
               ขนมสี่ถ้วย <br>
               ข้าวเหนียวถั่วดำ <br>
-              ข้าวเหนียวเปียกลำใย
-              </p>
-            </div>
-            <div class="col">
-              <p class="lead">
+              ข้าวเหนียวเปียกลำใย <br>
               ซาหริ่ม <br>
               ดาวล้อมเดือน <br>
-              ทับทิมกรอบรวมมิตร <br>
-              บัวลอยเผือก <br>
-              บัวลอยฟักทอง <br>
-              บัวลอยมะพร้าวอ่อน
+              ทับทิมกรอบรวมมิตร
               </p>
             </div>
             <div class="col">
               <p class="lead">
+              บัวลอยเผือก <br>
+              บัวลอยฟักทอง <br>
+              บัวลอยมะพร้าวอ่อน <br>
               บัวลอยสามสี <br>
               ฟักทองแกงบวด <br>
               มันต้มน้ำขิง <br>
@@ -519,29 +527,7 @@ Line button + Facebook
             </div>
           </div>
           <p><b>หรือ</b></p>
-          <h3>ขนมฝรั่ง (1 ชนิด)</h3>
-          <div class="row">
-            <div class="col">
-              <p class="lead">
-                คัสตาร์ด <br>
-                เค้กกล้วยหอม
-              </p>
-            </div>
-            <div class="col">
-              <p class="lead">
-                เค้กชอคโกแล็ตหน้านิ่ม <br>
-                เค้กชาไทย
-              </p>
-            </div>
-            <div class="col">
-              <p class="lead">
-                พายมะนาว <br>
-                พายมะพร้าวอ่อน
-              </p>
-            </div>
-          </div>
-          <p><b>หรือ</b></p>
-          <h3 align="center">ขนมหวานแห้ง (2 ชนิด)</h3>
+          <h3 align="center">ขนมแห้ง - ไทย (2 ชนิด)</h3>
           <div class="row">
             <div class="col">
               <p class="lead" align="center">
@@ -549,18 +535,14 @@ Line button + Facebook
                 ขนมกล้วย <br>
                 ขนมมัน <br>
                 ขนมเรไร <br>
-              </p>
-            </div>
-            <div class="col" align="center">
-              <p class="lead">
                 ขนมเหนียว <br>
                 ข้าวเหนียวหน้ากุ้ง <br>
-                ข้าวเหนียวสังขยา <br>
-                ตะโก้เผือก <br>
               </p>
             </div>
             <div class="col" align="center">
               <p class="lead">
+                ข้าวเหนียวสังขยา <br>
+                ตะโก้เผือก <br>
                 ตะโก้สาคู <br>
                 ถั่วแปป <br>
                 เปียกปูนกะทิสด <br>
@@ -568,10 +550,38 @@ Line button + Facebook
               </p>
             </div>
           </div>
+          <p><b>หรือ</b></p>
+          <h3>ขนมฝรั่ง (1 ชนิด)</h3>
+          <div class="row">
+            <div class="col">
+              <p class="lead">
+                คัสตาร์ด <br>
+                เค้กกล้วยหอม <br>
+                เค้กชอคโกแล็ตหน้านิ่ม <br>
+              </p>
+            </div>
+            <div class="col">
+              <p class="lead">
+                เค้กชาไทย <br>
+                พายมะนาว <br>
+                พายมะพร้าวอ่อน
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
     <!-- /.content-section-b -->
+
+    <section id="restaurant" class="content-section-a">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 ml-auto">
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="restaurant" class="content-section-b">
       <div class="container">
@@ -759,6 +769,15 @@ Line button + Facebook
           Tweet
           </a>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+          <div class="fb-like"
+            data-href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/"
+            data-layout="standard"
+            data-action="like"
+            data-size="small"
+            data-show-faces="true"
+            data-share="true">
+          </div>
         </div>
       </div>
     </footer>
