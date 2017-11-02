@@ -61,6 +61,31 @@ body, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
+.navbar-nav li ul {
+    display:none;
+    position:absolute;
+}
+.navbar-nav li:hover ul{
+    display:block;
+    background: #f8f8f8;
+    border-radius: 13px;
+}
+.navbar-nav li ul li{
+    clear:both;
+    border-style:none;
+    list-style-type: none;
+    height: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 0px;
+}
+.navbar-nav li ul li:hover {
+  background-color: #e2e2e2;
+  border-top-right-radius: 13px;
+  border-bottom-left-radius: 13px;
+
+}
+
 .navbar {
   z-index: 1;
 }
@@ -227,6 +252,9 @@ fieldset {
   .column {
       width: 100%;
   }
+  .navbar-nav li ul {
+      width: 80%;
+  }
 }
 
 .box{
@@ -241,7 +269,6 @@ fieldset {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
-  letter-spacing: 1px;
   color: black !important;
 }
 
