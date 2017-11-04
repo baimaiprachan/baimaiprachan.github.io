@@ -62,13 +62,15 @@ body, h2, h3, h4, h5, h6 {
 }
 
 .navbar-nav li ul {
-    display:none;
-    position:absolute;
+/*    display:none; */
+  visibility: hidden;
+  position: absolute;
 }
 .navbar-nav li:hover ul{
-    display:block;
-    background: #f8f8f8;
-    border-radius: 13px;
+/*    display:block;  */
+  visibility: visible;
+  background: #f8f8f8;
+  border-radius: 13px;
 }
 .navbar-nav li ul li{
     clear:both;
