@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <!--
-Occasions:
-Weddings
-โตกพระ วงพระ ชุดพระพุธ
 Lunch meetings
-ขึ้นบ้านใหม่
-
 make it possible to print/download menu
 -->
 <html lang="en">
@@ -81,11 +76,27 @@ make it possible to print/download menu
               scrollTop: $("#contact-anchor").offset().top-50
           }, 500);
       });
-
-      $('.single-item').slick({
-        dots: true
-      });
     });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          $('#indivDishModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var imgurl = button.data('id')
+            var name = button.text()
+            var modal = $(this)
+            modal.find('.modal-title').text(name)
+            modal.find('.modal-body input').val(name)
+            modal.find('.modal-body .foodimg').attr('src', "img/indiv/"+imgurl);
+            $.get('text/'+name+'.txt', function(data) {
+              modal.find('.desc').text(data)
+            }, 'text');
+          });
+          $("#indivDishModal").on("hidden.bs.modal", function(){
+              $(".desc").text("");
+          });
+        });
     </script>
   </head>
 
@@ -104,7 +115,7 @@ make it possible to print/download menu
               <a class="nav-link" id="about-btn">เกี่ยวกับเรา</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="catering-buffet-btn">จัดเลี้ยง</a>
+              <a class="nav-link" id="catering-buffet-btn">จัดเลี้ยง +</a>
               <ul class="nav-link">
                 <a class="nav-link-sub" id="mains-btn"><li>อาหารคาว</li></a>
                 <a class="nav-link-sub" id="desserts-btn"><li>ของหวาน</li></a>
@@ -125,43 +136,43 @@ make it possible to print/download menu
       </div>
     </nav>
 
-<section id="home">
-    <!-- Header -->
-    <header class="intro-header">
-      <div class="container">
-        <div class="intro-message">
-          <img class="img-circle" src="img/LOGO_BAIMAIPRACHAN.png" alt="Baimaiprachan_logo">
-          <h1>ใบไม้พระจันทร์</h1>
-          <h3>จัดเลี้ยงบุฟเฟต์และอาหารกล่อง</h3>
-          <hr class="intro-divider">
-          <h3>
-            <a id="phone-number" href="tel:+6620241480">02-024-1480</a>,
-            <a id="phone-number" href="tel:+66922674722">092-267-4722</a>
-          </h3>
-          <ul class="list-inline intro-social-buttons">
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/" class="btn btn-secondary btn-lg" target="_blank">
-                <i class="fa fa-facebook fa-fw"></i>
-                <span class="network-name">Facebook</span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/baimaiprachan/" class="btn btn-secondary btn-lg" target="_blank">
-                <i class="fa fa-instagram fa-fw"></i>
-                <span class="network-name">Instagram</span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="mailto:info.baimaiprachan@gmail.com" target="_blank" class="btn btn-secondary btn-lg">
-                <i class="fa fa-envelope fa-fw"></i>
-                <span class="network-name">info.baimaiprachan@gmail.com</span>
-              </a>
-            </li>
-          </ul>
+  <section id="home">
+      <!-- Header -->
+      <header class="intro-header">
+        <div class="container">
+          <div class="intro-message">
+            <img class="img-circle" src="img/LOGO_BAIMAIPRACHAN.png" alt="Baimaiprachan_logo">
+            <h1>ใบไม้พระจันทร์</h1>
+            <h3>จัดเลี้ยงบุฟเฟต์และอาหารกล่อง</h3>
+            <hr class="intro-divider">
+            <h3>
+              <a id="phone-number" href="tel:+6620241480">02-024-1480</a>,
+              <a id="phone-number" href="tel:+66922674722">092-267-4722</a>
+            </h3>
+            <ul class="list-inline intro-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/" class="btn btn-secondary btn-lg" target="_blank">
+                  <i class="fa fa-facebook fa-fw"></i>
+                  <span class="network-name">Facebook</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/baimaiprachan/" class="btn btn-secondary btn-lg" target="_blank">
+                  <i class="fa fa-instagram fa-fw"></i>
+                  <span class="network-name">Instagram</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:info.baimaiprachan@gmail.com" target="_blank" class="btn btn-secondary btn-lg">
+                  <i class="fa fa-envelope fa-fw"></i>
+                  <span class="network-name">info.baimaiprachan@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </header>
-</section>
+      </header>
+  </section>
 
     <!-- Page Content -->
 <!--    <section class="content-section-a"> -->
@@ -184,444 +195,508 @@ make it possible to print/download menu
       <!-- /.container -->
   </section>
 
-    <section id="catering-buffet" class="content-section-b">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 mr-auto order-lg-2">
-            <h2 class="section-heading">จัดเลี้ยงบุฟเฟต์นอกสถานที่</h2>
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <p class="lead">
-              ราคาเริ่มต้นที่ 180 บาท/ท่าน + ค่ายานพาหนะ
-              สำหรับแขก 50 ท่าน
-            </p>
-            <p class="lead">
-              รวมอาหารคาว 1 ชนิดต่อรายการ จากทั้งหมด 5 รายการ และขนมหวานน้ำ 1 ชนิด หรือ ขนมฝรั่ง 1 ชนิด หรือ ขนมหวานแห้ง 2 ชนิด
-            </p>
-            <p class="lead">
-              รวมข้าวสวย ขนมจีน น้ำเปล่า น้ำแข็ง ผลไม้ พนักงานบริการ และโต๊ะบุฟเฟต์
-​            </p>
+  <section id="catering-buffet" class="content-section-b">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mr-auto order-lg-2">
+          <h2 class="section-heading">จัดเลี้ยงบุฟเฟต์นอกสถานที่</h2>
+          <hr class="section-heading-spacer">
+          <div class="clearfix">
           </div>
-          <div class="col-lg-5 ml-auto order-lg-1">
-            <img class="img-fluid" src="img/buffet_tables_outside.jpg" alt="">
-          </div>
+          <p class="lead">
+            <table style="width:100%">
+             <tr>
+               <th>จำนวนแขก</th>
+               <th>ราคา</th>
+               <th>อาหารคาว</th>
+               <th>ของหวาน</th>
+             </tr>
+             <tr>
+               <td>30 ท่านขึ้นไป</td>
+               <td>200 บ./ท่าน</td>
+               <td>5 อย่าง</td>
+               <td>1-2 อย่าง</td>
+             </tr>
+             <tr>
+               <td>50 ท่านขึ้นไป</td>
+               <td>180 บ./ท่าน</td>
+               <td>5 อย่าง</td>
+               <td>1-2 อย่าง</td>
+             </tr>
+            </table>
+          </p>
+          <p class="lead">
+          </p>
+          <p class="lead">
+            รวมข้าวสวย ขนมจีน(สำหรับแกงเผ็ด) น้ำเปล่า น้ำแข็ง ผลไม้ ภาชนะอุ่นอาหาร จาน ชาม ช้อนส้อม แก้วน้ำ โต๊ะบุฟเฟต์
+            พนักงานบริการ
+          </p>
+          <p class="lead">
+            และมีโต๊ะเก้าอี้แขกให้เช่า (150 บาท/ชุด รวมโต๊ะ 1 ตัว เก้าอี้ 10 ตัว และผ้าตลุมโต๊ะ)
+            หากต้องการใช้บริการ กรุณาแจ้งทางร้านล่วงหน้า
+          </p>
+        </div>
+        <div class="col-lg-5 ml-auto order-lg-1">
+          <img class="img-fluid" src="img/buffet_tables_outside.jpg" alt="">
         </div>
       </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.content-section-b -->
+    </div>
+  </section>
 
-    <section id="mains" class="content-section-a">
-      <div class="container">
-        <div class="col-lg-12 ml-auto"  align="center">
-          <h2 class="section-heading">รายการอาหารคาว</h2>
-          <hr class="section-heading-spacer-c" style="width: 300px;">
-          <div class="clearfix"></div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 ml-auto">
-            <h3 align="center">รายการ 1</h3>
-            <div class="row">
-              <div class="col">
-                <p class="lead" align="center">
-                  เกาเหลาหมูตุ๋น <br>
-                  แกงกะหรี่ไก่ <br>
-                  แกงไก่ <br>
-                  แกงเขียวหวานไก่ <br>
-                  แกงจืดกะหล่ำปลียัดไส้ <br>
-                  แกงจืดขุนนาง <br>
-                  แกงจืดวุ้นเส้น <br>
-                  แกงนพเก้า <br>
-                  แกงบุ่มไบ่ <br>
-                  แกงเผ็ดทะเล <br>
-                  แกงเผ็ดหมูย่าง <br>
-                  แกงมัสมั่นไก่ <br>
-                  แกงเลียง <br>
-                  แกงส้มกุ้ง
-                </p>
-                </div>
-                <div class="col">
-                <p class="lead" align="center">
-                  แกงเทโพ <br>
-                  ไก่ตุ๋นพุทราจีน <br>
-                  ไก่ตุ๋นมะนาวดอง <br>
-                  ไก่ตุ๋นมะระ <br>
-                  ไก่ตุ๋นลำใย <br>
-                  ไก่น้ำแดง <br>
-                  จับฉ่าย <br>
-                  ซุปข้าวโพด <br>
-                  ซุปมะกะโรนี <br>
-                  ซุปเห็ดปิดแป้งพัฟ <br>
-                  ต้มข่าไก่ <br>
-                  ต้มข่าไก่มะพร้าวอ่อน <br>
-                  ต้มจิ๋วไก่ <br>
-                  ต้มแซบซี่โครงหมู
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 mr-auto">
-            <h3 align="center">รายการ 2</h3>
-            <div class="row">
-              <div class="col">
-                <p class="lead" align="center">
-                  กุ้งผัดผงกะหรี่ <br>
-                  ไก่กรอบมะนาว <br>
-                  ไก่แช่เหล้า <br>
-                  ไก่น้ำแดง <br>
-                  ไก่ผัดขิง <br>
-                  ไก่ผัดเม็ดมะม่วงหิมพานต์ <br>
-                  ไข่ตุ๋นญี่ปุ่น <br>
-                  ซี่โครงหมูอบน้ำผึ้ง
-                </p>
-              </div>
-              <div class="col">
-                <p class="lead" align="center">
-                  เต้าหู้เสฉวน <br>
-                  เนื้อผัดน้ำมันหอย <br>
-                  เป็ดกีตาร์ <br>
-                  ผัดเปรี้ยวหวานรวมมิตร <br>
-                  มัจฉาเทวดา <br>
-                  สลัดหมูเทอริยากิ <br>
-                  หมูผัดฮอยสินซอส
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 ml-auto">
-            <h3 align="center">รายการ 3</h3>
-            <div class="row">
-              <div class="col">
-                <p class="lead" align="center">
-                  กระเพาะปลาผัดแห้ง <br>
-                  ก๋วยเตี๋ยวราดหน้าหมู <br>
-                  กุ้งพันอ้อย <br>
-                  ไก่ย่างตะไคร้ <br>
-                  ขนมจีน-น้ำยา <br>
-                  ข้าวผัดกุ้ง <br>
-                  ข้าวผัดเทวดา <br>
-                  ข้าวผัดปู <br>
-                  ข้าวผัดโป๊ะแตก <br>
-                  ข้าวผัดสมุนไพร-ปลาสลิด <br>
-                  ข้าวผัดหมูย่าง
-                </p>
-                </div>
-                <div class="col">
-                <p class="lead" align="center">
-                  ข้าวมัน(กะทิ)-ส้มตำ <br>
-                  ข้าวหน้าไก่ <br>
-                  ไข่ตุ๋นญี่ปุ่น <br>
-                  ไข่ลูกเขย <br>
-                  ต้มยำทะเล <br>
-                  ทัตสึด้ง <br>
-                  โป๊ะแตก <br>
-                  วุ้นเส้นผัดไข่เค็ม <br>
-                  วุ้นเส้นผัดแหนม <br>
-                  หอยลายผัดน้ำพริกเผา
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 mr-auto">
-            <h3 align="center">รายการ 4</h3>
-            <div class="row">
-              <div class="col">
-                <p class="lead" align="center">
-                  ก๋วยเตี๋ยวลุยสวน <br>
-                  น้ำพริกกะปิ <br>
-                  น้ำพริกกุ้งสด <br>
-                  ยำไก่ย่าง <br>
-                  ยำทะเล <br>
-                  ยำทะเลย่าง <br>
-                  ยำเนื้อย่าง <br>
-                  ยำโน่นนิดนี่หน่อย <br>
-                  ยำปลาฟู <br>
-                  ยำผลไม้ <br>
-                  ยำมะเขือยาว <br>
-                  ยำยอดคะน้า
-                </p>
-              </div>
-              <div class="col">
-                <p class="lead" align="center">
-                  ยำริมรั้ว <br>
-                  ยำวุ้นเส้น <br>
-                  ยำหมูยอ <br>
-                  ยำเห็ดรวมมิตร <br>
-                  ยำเห็ดหลากชนิด <br>
-                  ลาบไก่ <br>
-                  ลาบทอด <br>
-                  ลาบหมู <br>
-                  ส้มตำไข่เค็ม <br>
-                  ส้มตำนพเก้า <br>
-                  หมูนึ่งมะนาว <br>
-                  หลนกะทิ
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 ml-auto">
-            <h3 align="center">รายการ 5</h3>
-            <div class="row">
-              <div class="col">
-                <p class="lead" align="center">
-                  กระทงทอง <br>
-                  ก๋วยเตี๋ยวลุยสวน <br>
-                  เกี๊ยวทอด <br>
-                  ไก่โรยงาทอด <br>
-                  ขนมปังหน้ากุ้ง <br>
-                  ขนมปังหน้าต้มยำกุ้ง <br>
-                  ขนมปังหน้าหมู <br>
-                  ข้าวตังหน้าตั้ง <br>
-                  ดอกกุ้ง <br>
-                  ถุงทอง
-                </p>
-                </div>
-                <div class="col">
-                <p class="lead" align="center">
-                  ปีกไก่ซีอิ้วทอด <br>
-                  ผัดผักสี่สหายน้ำแดง <br>
-                  ผัดผักโสภณ <br>
-                  ผัดมะระไฟแดง <br>
-                  เมี่ยงกลีบบัว <br>
-                  เมี่ยงคำ <br>
-                  ล่าเตียง <br>
-                  สลัดผลไม้ <br>
-                  หมูปั้นทอด <br>
-                  หมูอบยอดผัก
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 mr-auto">
-            <h3 align="center">รายการอาหารพิเศษ<br>(คำนวนราคาเพิ่มตามจำนวน)</h3>
-            <div class="row">
-              <div class="col">
-                <p class="lead" align="center">
-                  ก๋วยเตี๋ยวราดหน้าปลาเต้าซี่ <br>
-                  กุ้งทอดกระเทียม <br>
-                  กุ้งราดพริก <br>
-                  แกงเผ็ดเป็ดย่าง <br>
-                  เขียวหวานทะเล <br>
-                  ต้มยำกุ้ง <br>
-                  ปลาทอดน้ำปลา <br>
-                  ปลาทอดยำผลไม้
-                </p>
-              </div>
-              <div class="col">
-                <p class="lead" align="center">
-                  ปลานึ่งมะนาว <br>
-                  ปลาลูกเขย <br>
-                  เป็ดอบยอดผัก <br>
-                  ผัดโหงวก๊วย <br>
-                  พายทะเล <br>
-                  หอยจ้อ <br>
-                  แฮ่กึ้น
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <section id="mains" class="content-section-a">
+    <div class="container">
+      <div class="col-lg-12 ml-auto"  align="center">
+        <h2 class="section-heading">รายการอาหารคาว</h2>
+        <hr class="section-heading-spacer-c" style="width: 300px;">
+        <p class="lead">รวมอาหารคาว 1 อย่างต่อรายการ จากทั้งหมด 5 รายการ</p>
+        <div class="clearfix"></div>
       </div>
-    </section>
-
-
-    <section id="desserts" class="content-section-b">
-      <div class="container">
-        <h2 align="center">รายการของหวาน</h2>
-        <hr class="section-heading-spacer-c" style="width: 200px;">
-        <hr style="width: 0px">
-        <div class="col-lg-7" align="center" style="margin: auto;">
-          <h3>ขนมน้ำ - ไทย (1 ชนิด)</h3>
-          <div class="row">
-            <div class="col">
-              <p class="lead">
-              กระท้อนลอยแก้ว <br>
-              กล้วยบวดชี <br>
-              ขนมโคกะทิ <br>
-              ขนมสี่ถ้วย <br>
-              ข้าวเหนียวถั่วดำ <br>
-              ข้าวเหนียวเปียกลำใย <br>
-              ซาหริ่ม <br>
-              ดาวล้อมเดือน <br>
-              ทับทิมกรอบรวมมิตร
-              </p>
-            </div>
-            <div class="col">
-              <p class="lead">
-              บัวลอยเผือก <br>
-              บัวลอยฟักทอง <br>
-              บัวลอยมะพร้าวอ่อน <br>
-              บัวลอยสามสี <br>
-              ฟักทองแกงบวด <br>
-              มันต้มน้ำขิง <br>
-              ลูกตาลลอยแก้ว <br>
-              วุ้นตะไคร้ลอยแก้ว <br>
-              สาคูแคนตาลูป
-              </p>
-            </div>
-          </div>
-          <p><b>หรือ</b></p>
-          <h3 align="center">ขนมแห้ง - ไทย (2 ชนิด)</h3>
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <h3 align="center">รายการอาหารที่ 1<br>ประเภทแกง</h3>
           <div class="row">
             <div class="col">
               <p class="lead" align="center">
-                กล้วยไข่เชื่อม <br>
-                ขนมกล้วย <br>
-                ขนมมัน <br>
-                ขนมเรไร <br>
-                ขนมเหนียว <br>
-                ข้าวเหนียวหน้ากุ้ง <br>
+                <strong>แกงเผ็ด</strong><br>
+                แกงเขียวหวานไก่<br>
+                แกงเขียวหวานลูกชิ้นปลากราย<br>
+                แกงเขียวหวานหมูย่าง<br>
+                แกงเผ็ดไก่<br>
+                แกงกะหรี่ไก่<br>
+                แกงมัสมั่นไก่<br>
+                แกงรัญจวน<br>
+                แกงบุ่มไบ่<br>
+                แกงต้มจิ๋วไก่<br>
+                แกงไก่พิโรธ<br>
+                แกงหมูเทโพ<br>
+                แกงส้มผักรวมกุ้ง<br>
+                แกงส้มชะอมกุ้ง<br>
+                แกงส้มมะละกอกุ้ง<br>
+                ต้มแซบซี่โครงหมู<br>
+                ต้มยำไก่<br>
+                โป๊ะแตก<br>
+                ฉู่ฉี่ปลา<br>
+                พะแนงหมู<br>
+                ต้มข่าไก่
               </p>
-            </div>
-            <div class="col" align="center">
-              <p class="lead">
-                ข้าวเหนียวสังขยา <br>
-                ตะโก้เผือก <br>
-                ตะโก้สาคู <br>
-                ถั่วแปป <br>
-                เปียกปูนกะทิสด <br>
-                เยลลี่ตะไคร้
+              </div>
+              <div class="col">
+              <p class="lead" align="center">
+                <strong>เเกงจืด</strong><br>
+                เกาเหลาหมูตุ๋น<br>
+                ไก่ตุ๋นลำไย<br>
+                แกงจืดกะหล่ำปลียัดไส้<br>
+                แกงจืดขุนนาง<br>
+                ไก่ตุ๋นมะระ<br>
+                ไก่ตุ๋นมะนาวดอง<br>
+                จับฉ่าย<br>
+                ซุปมักกะโรนี<br>
+                แกงจืดเต้าหู้<br>
+                เกี้ยมอี๋น้ำ<br>
+                ซี่โครงหมูตุ๋นยาจีน<br>
+                แกงจืดลูกรอก<br>
+                ซุปน่องไก่มันฝรั่ง<br>
+                ซุปข้าวโพด<br>
+                แกงจืดมะระยัดไส้<br>
+                ไข่พะโล้
               </p>
             </div>
           </div>
-          <p><b>หรือ</b></p>
-          <h3>ขนมฝรั่ง (1 ชนิด)</h3>
+        </div>
+        <div class="col-lg-5 mr-auto">
+          <h3 align="center">รายการ 2<br>ประเภทยำ</h3>
           <div class="row">
             <div class="col">
-              <p class="lead">
-                คัสตาร์ด <br>
-                เค้กกล้วยหอม <br>
-                เค้กชอคโกแล็ตหน้านิ่ม <br>
+              <p class="lead" align="center">
+                <br>
+                ก๋วยเตี๋ยวลุยสวน<br>
+                ไข่เจียวลาบ<br>
+                น้ำตกหมู<br>
+                ยำไก่ย่าง<br>
+                ยำไก่ย่าง<br>
+                ยำคะน้ากุ้ง<br>
+                ยำเซี่ยงไฮ้<br>
+                ยำทะเล<br>
+                ยำเนื้อย่าง<br>
+                ยำโน่นนิดนี่หน่อย<br>
+                ยำผลไม้<br>
+                ยำผลไม้กับปลาทอด<br>
+                ยำผักยุ้งทอด<br>
               </p>
             </div>
             <div class="col">
-              <p class="lead">
-                เค้กชาไทย <br>
-                พายมะนาว <br>
-                พายมะพร้าวอ่อน
+              <p class="lead" align="center">
+                <br>
+                ยำมะเขือยาว<br>
+                ยำมะม่วง<br>
+                ยำริมรั้ว<br>
+                ยำวุ้นเส้น<br>
+                ยำส้มโอ<br>
+                ยำสารผัดเห็ด<br>
+                ยำหมูยอ<br>
+                ยำหมูย่าง<br>
+                ลาบไก่<br>
+                ลาบทอด<br>
+                ลาบหมู<br>
+                ส้มตำนพเก้า<br>
+                หมูนึ่งมะนาว
               </p>
             </div>
           </div>
-
         </div>
       </div>
-    </section>
-    <!-- /.content-section-b -->
-
-
-    <section id="alms" class="content-section-a">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <h2 class="section-heading">เลี้ยงพระ</h2>
-            <hr class="section-heading-spacer-r">
-            <div class="clearfix"></div>
-            <p class="lead">
-              นอกเหนือจากนี้ ทางร้านรับเลี้ยงพระ เป็น:<br>
-                &bull; วง (เริ่มต้นที่ 180 บาทต่อรูป)<br>
-                &bull; โตก (250 บาทต่อรูป)<br>
-                &bull; ชุดพระพุทธ (ไม่คิดเพิ่ม)<br>
-              หากต้องการใช้บริการ กรุณาแจ้งทางร้านล่วงหน้า
-            </p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <img class="img-fluid" src="img/ชุดพระพุทธ.jpg" alt="">
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <section id="restaurant" class="content-section-b">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 mr-auto order-lg-2">
-            <h2 class="section-heading">ร้านอาหารบุฟเฟต์<br>ของว่าง คาว หวาน ไทย จีน ฝรั่ง</h2>
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <p class="lead">ทดลองรับประทานอาหารร้านใบไมพระจันทร์ได้ที่
-              <a target="_blank" href="http://iris.co.th/venicediiris/">เวนิสชอปปิ้ง พลาซ่า วัชรพล</a>
-              อาหารบุฟเฟ่ต์ ไทย จีน ฝรั่ง รายการอาหารเปลี่ยนทุกวัน ดูรายการวันนี้ได้ทาง
-              <a href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/">
-                <i class="fa fa-facebook fa-fw"></i>
-                ใบไม้พระจันทร์ ที่ เวนิสวัชรพล
-              </a>
-            </p>
-            <p class="lead">ราคา 180 บาทต่อท่าน<br>
-              เด็ก 1-5 ขวบฟรี<br>
-              เด็ก 6-12 ขวบ 75 บาท
-            </p>
-            <p class="lead">
-              รวมอาหารคาวอย่างน้อย 10 รายการ อาหารหวานอย่างน้อย 5 รายการ
-              ไอศกรีม ผลไม้ และน้ำเปล่า ไม่จำกัดเวลา อาหารทำใหม่ทุกวัน
-            </p>
-            <p class="lead">
-              มื้อเที่ยง 11:30 - 14:30<br>
-              มื้อเย็น 17:30 - 20:30<br>
-              ปิดวันจันทร์
-            </p>
-          </div>
-          <div class="col-lg-5 ml-auto order-lg-1">
-            <img class="img-fluid" src="img/restaurant.png" alt="">
-          </div>
-        </div>
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.content-section-a -->
-
-    <section id="gallery" class="content-section-a">
-      <div class="container">
-        <div class="row">
-          <div class="column">
-            <div class="content" onclick="openModal();currentSlide(1)">
-            <img src="img/แกงรัญจวน.jpg" alt="แกงรัญจวน" style="width:100%">
-              <h3>อาหารคาว</h3>
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <h3 align="center">รายการ 3</h3>
+          <div class="row">
+            <div class="col">
+              <p class="lead" align="center">
+                กระเพาะปลาผัดแห้ง<br>
+                ก๋วยเตี๋ยวราดหน้าหมู<br>
+                กุ้งพันอ้อย<br>
+                ไก่ย่างตะไคร้<br>
+                ขนมจีน-น้ำยา<br>
+                ข้าวผัดกุ้ง<br>
+                ข้าวผัดเทวดา<br>
+                ข้าวผัดปู<br>
+                ข้าวผัดโป๊ะแตก<br>
+                ข้าวผัดสมุนไพร-ปลาสลิด
+              </p>
+              </div>
+              <div class="col">
+              <p class="lead" align="center">
+                ข้าวผัดหมูย่าง<br>
+                ข้าวมัน(กะทิ)-ส้มตำ<br>
+                ข้าวหน้าไก่<br>
+                ไข่ตุ๋นญี่ปุ่น<br>
+                ไข่ลูกเขย<br>
+                ต้มยำทะเล<br>
+                ทัตสึด้ง<br>
+                โป๊ะแตก<br>
+                วุ้นเส้นผัดไข่เค็ม<br>
+                วุ้นเส้นผัดแหนม<br>
+                หอยลายผัดน้ำพริกเผา
+              </p>
             </div>
           </div>
-          <div class="column">
-            <div class="content">
-            <img src="img/LemonMeringuePie.jpg" alt="Lemon Meringue Pie" style="width:100%">
-              <h3>ของหวาน</h3>
+        </div>
+        <div class="col-lg-5 mr-auto">
+          <h3 align="center">รายการ 4</h3>
+          <div class="row">
+            <div class="col">
+              <p class="lead" align="center">
+                กุ้งผัดผงกะหรี่<br>
+                ไก่กรอบมะนาว<br>
+                ไก่แช่เหล้า<br>
+                ไก่น้ำแดง<br>
+                ไก่ผัดขิง<br>
+                ไก่ผัดเม็ดมะม่วงหิมพานต์<br>
+                ไข่ตุ๋นญี่ปุ่น
+              </p>
             </div>
-          </div>
-          <div class="column">
-            <div class="content">
-              <img src="img/buffet_tables_cropped.jpg" alt="buffet tables" style="width:100%">
-              <h3>จัดเลี้ยงนอกสถานที่</h3>
+            <div class="col">
+              <p class="lead" align="center">
+                ซี่โครงหมูอบน้ำผึ้ง<br>
+                เต้าหู้เสฉวน<br>
+                เนื้อผัดน้ำมันหอย<br>
+                เป็ดกีตาร์<br>
+                ผัดเปรี้ยวหวานรวมมิตร<br>
+                มัจฉาเทวดา<br>
+                สลัดหมูเทอริยากิ<br>
+                หมูผัดฮอยสินซอส
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <!-- /.container -->
-    </section>
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <h3 align="center">รายการ 5</h3>
+          <div class="row">
+            <div class="col">
+              <p class="lead" align="center">
+                กระทงทอง<br>
+                ก๋วยเตี๋ยวลุยสวน<br>
+                เกี๊ยวทอด<br>
+                ไก่โรยงาทอด<br>
+                ขนมปังหน้ากุ้ง<br>
+                ขนมปังหน้าต้มยำกุ้ง<br>
+                ขนมปังหน้าหมู<br>
+                ข้าวตังหน้าตั้ง<br>
+                ดอกกุ้ง<br>
+                ถุงทอง
+              </p>
+              </div>
+              <div class="col">
+              <p class="lead" align="center">
+                ปีกไก่ซีอิ้วทอด<br>
+                ผัดผักสี่สหายน้ำแดง<br>
+                ผัดผักโสภณ<br>
+                ผัดมะระไฟแดง<br>
+                เมี่ยงกลีบบัว<br>
+                เมี่ยงคำ<br>
+                ล่าเตียง<br>
+                สลัดผลไม้<br>
+                หมูปั้นทอด<br>
+                หมูอบยอดผัก
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 mr-auto">
+          <h3 align="center">รายการอาหารพิเศษ<br>(คำนวนราคาเพิ่มตามจำนวน)</h3>
+          <div class="row">
+            <div class="col">
+              <p class="lead" align="center">
+                ก๋วยเตี๋ยวราดหน้าปลาเต้าซี่<br>
+                กุ้งทอดกระเทียม<br>
+                กุ้งราดพริก<br>
+                แกงเผ็ดเป็ดย่าง<br>
+                แกงเขียวหวานทะเล<br>
+                ต้มยำกุ้ง<br>
+                ปลาทอดน้ำปลา
+              </p>
+            </div>
+            <div class="col">
+              <p class="lead" align="center">
+                ปลาทอดยำผลไม้<br>
+                ปลานึ่งมะนาว<br>
+                ปลาลูกเขย<br>
+                เป็ดอบยอดผัก<br>
+                ผัดโหงวก๊วย<br>
+                พายทะเล<br>
+                หอยจ้อ<br>
+                แฮ่กึ้น
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Modal image-->
-  <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-      <div class="mySlides">
-        <img src="img/ข้าวเหนียวสังขยาข้าวเหนียวหน้ากุ้ง.jpg" style="width:100%">
+  <section id="desserts" class="content-section-b">
+    <div class="container">
+      <div class="col-lg-12 ml-auto"  align="center">
+        <h2 class="section-heading">รายการของหวาน</h2>
+        <hr class="section-heading-spacer-c" style="width: 200px;">
+        <p class="lead">เลือกขนมหวานน้ำ 1 อย่าง หรือ ขนมฝรั่ง 1 อย่าง หรือ ขนมหวานแห้ง 2 อย่าง</p>
+        <div class="clearfix"></div>
       </div>
-      <div class="mySlides">
-        <img src="img/แกงส้ม2.jpg" style="width:100%">
+      <div class="col-lg-7" align="center" style="margin: auto;">
+        <h3>ขนมน้ำ - ไทย (1 ชนิด)</h3>
+        <h4>เย็น</h4>
+        <div class="row">
+          <div class="col">
+            <p class="lead">
+              กระท้อนลอยแก้ว (ตามฤดูกาล)<br>
+              ขนมสี่ถ้วย<br>
+              แก้วชิงดวง<br>
+              ซาหริ่ม<br>
+              ทับทิมกรอบรวมมิตร
+            </p>
+          </div>
+          <div class="col">
+            <p class="lead">
+              ผลไม้ลอยแก้ว<br>
+              ลอดช่อง-แตงไทย<br>
+              ลูกตาลลอยแก้ว<br>
+              สาคู-แคนตาลูป
+            </p>
+          </div>
+        </div>
+        <h4>ร้อน</h4>
+        <div class="row">
+          <div class="col">
+            <p class="lead">
+              <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="กล้วยบวชชี.jpg">กล้วยบวชชี</span><br>
+              แกงบวชฟักทอง<br>
+              แกงบวชรวมมิตร<br>
+              ขนมโคกะทิ<br>
+              ข้าวเหนียวดำเปียกเผือก<br>
+              ข้าวเหนียวถั่วดำ<br>
+              ข้าวเหนียวเปียกข้าวโพด<br>
+              ข้าวเหนียวเปียกลำไย (ตามฤดูกาล)<br>
+              ดาวล้อมเดือน<br>
+              เต้าทึงกะทิ<br>
+              เต้าทึงน้ำลำไย<br>
+              เต้าส่วน
+            </p>
+          </div>
+          <div class="col">
+            <p class="lead">
+              เต้าฮวยน้ำขิง<br>
+              เต้าฮวยผลไม้สด<br>
+              บัวลอยน้ำขิง<br>
+              บัวลอยเผือก<br>
+              บัวลอยฟักทอง<br>
+              บัวลอยมะพร้าวอ่อน<br>
+              บัวลอยสาคู<br>
+              บัวลอยสามสี<br>
+              เปียกธัญญพืช<br>
+              มันต้มน้ำขิง<br>
+              สามเกลอน้ำพุทราจีน<br>
+              อินทนิล (ไม่เกิน 100 ที่)
+            </p>
+          </div>
+        </div>
+        <p><b>หรือ</b></p>
+        <h3 align="center">ขนมแห้ง - ไทย (2 ชนิด)</h3>
+        <div class="row">
+          <div class="col">
+            <p class="lead" align="center">
+              กล้วยไข่เชื่อม<br>
+              ขนมกล้วย<br>
+              ขนมมัน<br>
+              ขนมเรไร<br>
+              ขนมเหนียว<br>
+              ข้าวเหนียวหน้ากุ้ง<br>
+              ข้าวเหนียวสังขยา<br>
+              ต้มขาว<br>
+              ตะโก้เผือก<br>
+            </p>
+          </div>
+          <div class="col" align="center">
+            <p class="lead">
+              ตะโก้สาคู<br>
+              ถั่วแปบ<br>
+              เปียกปูนกะทิสด<br>
+              เล็บมือนาง<br>
+              วุ้นกาแฟ<br>
+              วุ้นตะไคร้ลอยแก้ว<br>
+              วุ้นลิ้นจี่<br>
+              หยกมณี
+            </p>
+          </div>
+        </div>
+        <p><b>หรือ</b></p>
+        <h3>ขนมฝรั่ง (1 ชนิด)</h3>
+        <div class="row">
+          <div class="col">
+            <p class="lead">
+              คัสตาร์ด<br>
+              เค้กกล้วยหอม<br>
+              เค้กชอคโกแล็ตหน้านิ่ม
+            </p>
+          </div>
+          <div class="col">
+            <p class="lead">
+              เค้กชาไทย<br>
+              พายมะนาว<br>
+              พายมะพร้าวอ่อน
+            </p>
+          </div>
+        </div>
+
       </div>
-      <div class="mySlides">
-        <img src="img/ข้าวเหนียวมะม่วง.jpg" style="width:100%">
+    </div>
+  </section>
+  <!-- /.content-section-b -->
+
+  <div class="modal fade" id="indivDishModal" tabindex="-1" role="dialog" aria-labelledby="indivDishModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="indivDishModalLabel">New message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img class="foodimg" src="" style="width:100%;">
+          <div class="desc"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
       </div>
-      <div class="mySlides">
-        <img src="img/ไข่ตุ๋นญี่ปุ่น2.jpg" style="width:100%">
-      </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
   </div>
-<!-- -->
+
+  <section id="alms" class="content-section-a">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <h2 class="section-heading">เลี้ยงพระ</h2>
+          <hr class="section-heading-spacer-r">
+          <div class="clearfix"></div>
+          <p class="lead">
+            นอกเหนือจากนี้ ทางร้านรับเลี้ยงพระ เป็น:<br>
+              &bull; วง (เริ่มต้นที่ 180 บาทต่อรูป)<br>
+              &bull; โตก (250 บาทต่อรูป)<br>
+              &bull; ชุดพระพุทธ (ไม่คิดเพิ่ม)<br>
+          </p>
+        </div>
+        <div class="col-lg-5 mr-auto">
+          <img class="img-fluid" src="img/ชุดพระพุทธ.png" alt="">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="restaurant" class="content-section-b">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mr-auto order-lg-2">
+          <h2 class="section-heading">ร้านอาหารบุฟเฟต์<br>ของว่าง คาว หวาน ไทย จีน ฝรั่ง</h2>
+          <hr class="section-heading-spacer">
+          <div class="clearfix"></div>
+          <p class="lead">ทดลองรับประทานอาหารร้านใบไมพระจันทร์ได้ที่
+            <a target="_blank" href="http://iris.co.th/venicediiris/">เวนิสชอปปิ้ง พลาซ่า วัชรพล</a>
+            อาหารบุฟเฟ่ต์ ไทย จีน ฝรั่ง รายการอาหารเปลี่ยนทุกวัน ดูรายการวันนี้ได้ทาง
+            <a href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/">
+              <i class="fa fa-facebook fa-fw"></i>
+              ใบไม้พระจันทร์ ที่ เวนิสวัชรพล
+            </a>
+          </p>
+          <p class="lead">ราคา 180 บาทต่อท่าน<br>
+            เด็ก 1-5 ขวบฟรี<br>
+            เด็ก 6-12 ขวบ 75 บาท
+          </p>
+          <p class="lead">
+            รวมอาหารคาวอย่างน้อย 10 รายการ อาหารหวานอย่างน้อย 5 รายการ
+            ไอศกรีม ผลไม้ และน้ำเปล่า ไม่จำกัดเวลา อาหารทำใหม่ทุกวัน
+          </p>
+          <p class="lead">
+            มื้อเที่ยง 11:30 - 14:30<br>
+            มื้อเย็น 17:30 - 20:30<br>
+            ปิดวันจันทร์
+          </p>
+        </div>
+        <div class="col-lg-5 ml-auto order-lg-1">
+          <img class="img-fluid" src="img/restaurant.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.content-section-a -->
+
+  <section id="gallery" class="content-section-a">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <div class="content">
+            <img src="img/แกงรัญจวน.jpg" alt="แกงรัญจวน" style="width:100%">
+            <h3>อาหารคาว</h3>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="img/LemonMeringuePie.jpg" alt="Lemon Meringue Pie" style="width:100%">
+            <h3>ของหวาน</h3>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="img/buffet_tables_cropped.jpg" alt="buffet tables" style="width:100%">
+            <h3>จัดเลี้ยงนอกสถานที่</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
 
     <section id="contact-anchor">
       <aside class="banner">
@@ -632,7 +707,7 @@ make it possible to print/download menu
                 <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJdSIvFTh9HTERzAZ5hrNUfEQ&key=AIzaSyDCkcQlKpb_fgbfFPbpeVIxbgld89HUwLo" allowfullscreen></iframe>
               </div>
               <h3>ติดต่อเรา:</h3>
-              <div id="left" class="col-lg-6 my-auto order-lg-1">
+              <div id="left-float" class="col-lg-6 my-auto order-lg-1">
                 <p>
                   ร้านใบไม้พระจันทร์<br>
                   1/224 เวนิส ช็อปปิ้ง พลาซ่า<br>
@@ -640,10 +715,10 @@ make it possible to print/download menu
                   กทม 10220
                 </p>
               </div>
-              <div id="right" class="col-lg-6 my-auto order-lg-2">
+              <div id="right-float" class="col-lg-6 my-auto order-lg-2">
                 <p>
-                  โทร. <a color="black" href="tel:+6620241480">02-024 1480</a><br>
-                  หรือ <a color="black" href="tel:+66922674722">092-267-4722</a><br>
+                  <i class="fa fa-phone fa-fw"></i> <a color="black" href="tel:+6620241480">02-024 1480</a><br>
+                  <i class="fa fa-mobile fa-fw"></i> <a color="black" href="tel:+66922674722">092-267-4722</a><br>
                   <i class="fa fa-envelope fa-fw"></i> <a href="mailto:info.baimaiprachan@gmail.com">info.baimaiprachan@gmail.com</a><br>
                   <i class="fa fa-facebook fa-fw"></i> <a href="https://www.facebook.com/BaimaiPrachanVeniceWatcharaphol/">ใบไม้พระจันทร์ ที่ เวนิสวัชรพล</a>
                 </p>
@@ -686,7 +761,7 @@ make it possible to print/download menu
     <!-- Footer -->
     <footer>
       <div class="container">
-        <div id="left" class="col-lg-6 mr-auto order-lg-1">
+        <div id="left-float" class="col-lg-6 mr-auto order-lg-1">
           <ul class="list-inline">
             <li class="list-inline-item">
               <a href="#">หน้าหลัก</a>
@@ -718,7 +793,7 @@ make it possible to print/download menu
         </div>
 
 
-        <div id="left" class="col-lg-6 mr-auto order-lg-2">
+        <div id="left-float" class="col-lg-6 mr-auto order-lg-2">
           <div class="line-it-button"
             style="display: inline; width: 72px; height: 28px;"
             data-lang="en"
@@ -748,41 +823,9 @@ make it possible to print/download menu
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      function openModal() {
-        document.getElementById('myModal').style.display = "block";
-      }
-
-      function closeModal() {
-        document.getElementById('myModal').style.display = "none";
-      }
-
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-      }
-    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </body>
 
