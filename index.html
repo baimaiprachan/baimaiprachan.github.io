@@ -98,6 +98,16 @@ make it possible to print/download menu
           });
         });
     </script>
+<!--
+    <script>
+      $(document).ready(function(){
+        $('figure').not('.init-img').hide();
+        $('.mains-btn-next').click(function () {
+            $('figure').not('.init-img').show(300);
+        });
+      });
+    </script>
+-->
   </head>
 
   <body>
@@ -526,11 +536,11 @@ make it possible to print/download menu
           </div>
           <div class="col">
             <p class="lead">
-              ผลไม้ลอยแก้ว<br>
+              <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ผลไม้ลอยแก้ว.jpg">ผลไม้ลอยแก้ว</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ลอดช่อง-แตงไทย.jpg">ลอดช่อง-แตงไทย</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ลูกตาลลอยแก้ว.jpg">ลูกตาลลอยแก้ว</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="สาคู-แคนตาลูป.jpg">สาคู-แคนตาลูป</span><br>
-              วุ้นลิ้นจี่ลอยแก้ว<br>
+              <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="วุ้นลิ้นจี่ลอยแก้ว.jpg">วุ้นลิ้นจี่ลอยแก้ว</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="สาลิกาเล่นน้ำ.jpg">สาลิกาเล่นน้ำ</span>
             </p>
           </div>
@@ -540,13 +550,13 @@ make it possible to print/download menu
           <div class="col">
             <p class="lead">
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="กล้วยบวชชี.jpg">กล้วยบวชชี</span><br>
-              <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ฟักทองแกงบวด.jpg">ฟักทองแกงบวด</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="แกงบวดรวมมิตร.jpg">แกงบวดรวมมิตร</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ขนมโคกะทิ.jpg">ขนมโคกะทิ</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ข้าวเหนียวดำเปียกเผือก.jpg">ข้าวเหนียวดำเปียกเผือก</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ข้าวเหนียวถั่วดำ.jpg">ข้าวเหนียวถั่วดำ</span><br>
               ข้าวเหนียวเปียกข้าวโพด<br>
-              <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ข้าวเหนียวเปียกลำไย.jpg">ข้าวเหนียวเปียกลำไย (ตามฤดูกาล)</span><br>
+              <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ข้าวเหนียวเปียกลำใย.jpg">ข้าวเหนียวเปียกลำใย (ตามฤดูกาล)</span><br>
+              <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ฟักทองแกงบวด.jpg">ฟักทองแกงบวด</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="ดาวล้อมเดือน.jpg">ดาวล้อมเดือน</span><br>
               เต้าทึงกะทิ<br>
               เต้าทึงน้ำลำไย<br>
@@ -594,7 +604,7 @@ make it possible to print/download menu
               ถั่วแปบ<br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="เปียกปูนกะทิสด.jpg">เปียกปูนกะทิสด</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="เล็บมือนาง.jpg">เล็บมือนาง</span><br>
-              วุ้นกาแฟ<br>
+              <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="วุ้นกาแฟ.jpg">วุ้นกาแฟ</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="วุ้นตะไคร้ลอยแก้ว.jpg">วุ้นตะไคร้ลอยแก้ว</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="วุ้นลิ้นจี่.jpg">วุ้นลิ้นจี่</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="หยกมณี.jpg">หยกมณี</span><br>
@@ -704,28 +714,284 @@ make it possible to print/download menu
   </section>
   <!-- /.content-section-a -->
 
+  <!-- https://codepen.io/dudleystorey/pen/yqrhw -->
   <section id="gallery" class="content-section-a">
     <div class="container">
-      <div class="row">
-        <div class="column">
-          <div class="content">
-            <img src="img/แกงรัญจวน.jpg" alt="แกงรัญจวน" style="width:100%">
-            <h3>อาหารคาว</h3>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <img src="img/LemonMeringuePie.jpg" alt="Lemon Meringue Pie" style="width:100%">
-            <h3>ของหวาน</h3>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <img src="img/buffet_tables_cropped.jpg" alt="buffet tables" style="width:100%">
-            <h3>จัดเลี้ยงนอกสถานที่</h3>
-          </div>
-        </div>
+      <h3 align="left">ดูรูป</h3>
+      <div id="columns">
+        <figure class="init-img">
+        <img src="img/buffet_tables.jpg">
+        <figcaption>โต๊ะบุฟเฟต์</figcaption>
+        </figure>
+
+        <figure class="init-img">
+        <img src="img/plating.jpg">
+        <figcaption>ภาชนะ</figcaption>
+        </figure>
+
+        <figure class="init-img">
+        <img src="img/buffet_tables_outside.jpg">
+        <figcaption>โต๊ะบุฟเฟต์</figcaption>
+        </figure>
       </div>
+      <!--
+      <h3 align="left">อาหารคาว</h3>
+      <button type="button" id="mains-btn-next">Next</button>
+        <div id="columns">
+          <figure class="init-img">
+          <img src="img/indiv/แกงเผ็ดไก่.jpg">
+          <figcaption>แกงเผ็ดไก่</figcaption>
+          </figure>
+
+          <figure class="init-img">
+          <img src="img/indiv/แกงมัสมั่นไก่.jpg">
+          <figcaption>แกงมัสมั่นไก่</figcaption>
+          </figure>
+
+          <figure class="init-img">
+          <img src="img/indiv/แกงรัญจวน.jpg">
+          <figcaption>แกงรัญจวน</figcaption>
+          </figure>
+
+          <figure>
+          <img src="img/indiv/ต้มแซบซี่โครงหมู.jpg">
+          <figcaption>ต้มแซบซี่โครงหมู</figcaption>
+          </figure>
+
+          <figure>
+          <img src="img/indiv/ฉู่ฉี่ปลา.jpg">
+          <figcaption>ฉู่ฉี่ปลา</figcaption>
+          </figure>
+
+          <figure>
+          <img src="img/indiv/ระแวงเนื้อ.jpg">
+          <figcaption>ระแวงเนื้อ</figcaption>
+          </figure>
+      </div>
+      <h3 align="left">ของหวาน</h3>
+      <div id="columns">
+        <figure class="init-img">
+        <img src="img/indiv/ขนมสี่ถ้วย.jpg">
+        <figcaption>ขนมสี่ถ้วย</figcaption>
+        </figure>
+
+        <figure class="init-img">
+        <img src="img/indiv/แก้วชิงดวง.jpg">
+        <figcaption>แก้วชิงดวง</figcaption>
+        </figure>
+
+        <figure class="init-img">
+        <img src="img/indiv/ทับทิมกรอบรวมมิตร.jpg">
+        <figcaption>ทับทิมกรอบรวมมิตร</figcaption>
+        </figure>
+
+        <figure>
+        <img id="gallery-img" src="img/indiv/ผลไม้ลอยแก้ว.jpg">
+        <figcaption>ผลไม้ลอยแก้ว</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ลอดช่อง-แตงไทย.jpg">
+        <figcaption>ลอดช่อง-แตงไทย</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ลูกตาลลอยแก้ว.jpg">
+        <figcaption>ลูกตาลลอยแก้ว</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/สาคู-แคนตาลูป.jpg">
+        <figcaption>สาคู-แคนตาลูป</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/วุ้นลิ้นจี่ลอยแก้ว.jpg">
+        <figcaption>วุ้นลิ้นจี่ลอยแก้ว</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/สาลิกาเล่นน้ำ.jpg">
+        <figcaption>สาลิกาเล่นน้ำ</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/กล้วยบวชชี.jpg">
+        <figcaption>กล้วยบวชชี</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/แกงบวดรวมมิตร.jpg">
+        <figcaption>แกงบวดรวมมิตร</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ขนมโคกะทิ.jpg">
+        <figcaption>ขนมโคกะทิ</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ข้าวเหนียวดำเปียกเผือก.jpg">
+        <figcaption>ข้าวเหนียวดำเปียกเผือก</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ข้าวเหนียวถั่วดำ.jpg">
+        <figcaption>ข้าวเหนียวถั่วดำ</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ข้าวเหนียวเปียกลำใย.jpg">
+        <figcaption>ข้าวเหนียวเปียกลำใย (ตามฤดูกาล)</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ดาวล้อมเดือน.jpg">
+        <figcaption>ดาวล้อมเดือน</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/เต้าส่วน.jpg">
+        <figcaption>เต้าส่วน</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/เต้าฮวยน้ำขิง.jpg">
+        <figcaption>เต้าฮวยน้ำขิง</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/เต้าฮวยผลไม้สด.jpg">
+        <figcaption>เต้าฮวยผลไม้สด</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/บัวลอยน้ำขิง.jpg">
+        <figcaption>บัวลอยน้ำขิง</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/บัวลอยเผือก.jpg">
+        <figcaption>บัวลอยเผือก</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/บัวลอยฟักทอง.jpg">
+        <figcaption>บัวลอยฟักทอง</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/บัวลอยสามสี.jpg">
+        <figcaption>บัวลอยสามสี</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/เปียกธัญพืช.jpg">
+        <figcaption>เปียกธัญพืช</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/อินทนิล.jpg">
+        <figcaption>อินทนิล (ไม่เกิน 100 ที่)</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/กล้วยไข่เชื่อม.jpg">
+        <figcaption>กล้วยไข่เชื่อม</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ขนมกล้วย.jpg">
+        <figcaption>ขนมกล้วย</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ขนมมัน.jpg">
+        <figcaption>ขนมมัน</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ขนมเรไร.jpg">
+        <figcaption>ขนมเรไร</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ขนมเหนียว.jpg">
+        <figcaption>ขนมเหนียว</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/ข้าวเหนียวหน้ากุ้ง.jpg">
+        <figcaption>ข้าวเหนียวหน้ากุ้ง</figcaption>
+        </figure>
+
+        <figure>
+      	<img src="img/indiv/ข้าวเหนียวสังขยา.jpg">
+      	<figcaption>ข้าวเหนียวสังขยา</figcaption>
+      	</figure>
+
+        <figure>
+        <img src="img/indiv/ตะโก้สาคู.jpg">
+        <figcaption>ตะโก้สาคู</figcaption>
+        </figure>
+
+        <figure>
+        <img src="img/indiv/เปียกปูนกะทิสด.jpg">
+        <figcaption>เปียกปูนกะทิสด</figcaption>
+        </figure>
+
+      	<figure>
+      	<img src="img/indiv/เล็บมือนาง.jpg">
+      	<figcaption>เล็บมือนาง</figcaption>
+      	</figure>
+
+        <figure>
+      	<img src="img/indiv/วุ้นกาแฟ.jpg">
+      	<figcaption>วุ้นกาแฟ</figcaption>
+      	</figure>
+
+        <figure>
+      	<img src="img/indiv/วุ้นตะไคร้ลอยแก้ว.jpg">
+      	<figcaption>วุ้นตะไคร้ลอยแก้ว</figcaption>
+      	</figure>
+
+      	<figure>
+      	<img src="img/indiv/วุ้นลิ้นจี่.jpg">
+      	<figcaption>วุ้นลิ้นจี่</figcaption>
+      	</figure>
+
+        <figure>
+        <img src="img/indiv/หยกมณี.jpg">
+      	<figcaption>หยกมณี</figcaption>
+      	</figure>
+
+        <figure>
+        <img src="img/indiv/คัสตาร์ด.jpg">
+      	<figcaption>คัสตาร์ด</figcaption>
+      	</figure>
+
+        <figure>
+        <img src="img/indiv/เค้กกล้วยหอม.jpg">
+      	<figcaption>เค้กกล้วยหอม</figcaption>
+      	</figure>
+
+        <figure>
+        <img src="img/indiv/เค้กชอคโกแล็ตหน้านิ่ม.jpg">
+      	<figcaption>เค้กชอคโกแล็ตหน้านิ่ม</figcaption>
+      	</figure>
+
+        <figure>
+        <img src="img/indiv/พายมะนาว.jpg">
+      	<figcaption>พายมะนาว</figcaption>
+      	</figure>
+
+        <figure>
+        <img src="img/indiv/พายมะพร้าวอ่อน.jpg">
+      	<figcaption>พายมะพร้าวอ่อน</figcaption>
+      	</figure>
+
+      </div>
+-->
     </div>
     <!-- /.container -->
   </section>
@@ -756,11 +1022,7 @@ make it possible to print/download menu
                 </p>
               </div>
             </div>
-<!--
-            <div class="col-lg-6 my-auto">
-              <img src="img/VeniceDiIris_Baimai6.jpg" style="width:100%">
-            </div>
--->
+
             <div class="col-lg-6 my-auto">
               <div class="container">
                 <form id="contact" action="https://docs.google.com/forms/d/e/1FAIpQLScoZ87o6UVzmfyJhSmSGnk7AvhhE4prnrpcjhWSRXATsndSIA/formResponse" method="post">
@@ -855,7 +1117,9 @@ make it possible to print/download menu
     </footer>
 
     <!-- Bootstrap core JavaScript -->
+    <!--
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
