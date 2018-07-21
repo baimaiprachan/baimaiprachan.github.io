@@ -87,16 +87,34 @@ make it possible to print/download menu
             var imgurl = button.data('id')
             var name = button.text()
             var modal = $(this)
+
             modal.find('.modal-title').text(name)
             modal.find('.modal-body input').val(name)
             modal.find('.modal-body .foodimg').attr('src', "img/indiv/"+imgurl);
-            $.get('text/'+name+'.txt', function(data) {
-              modal.find('.desc').text(data)
-            }, 'text');
+
+            $.ajax({
+                url:'text/'+name+'.txt',
+                type:'text',
+                error: function()
+                {
+                    //file not exists
+                },
+                success: function()
+                {
+                  $.get("text/"+name+".txt", function(data) {
+                    modal.find('.modal-body .desc').text(name)
+                  }, 'text');
+                }
+            });
+
+            //$.get("text/"+name+".txt", function(data) {
+              //modal.find('.modal-body .desc').text(name)
+            //}, 'text');
+
           });
-          $("#indivDishModal").on("hidden.bs.modal", function(){
-              $(".desc").text("");
-          });
+          //$("#indivDishModal").on("hidden.bs.modal", function(){
+          //    $(".desc").text("");
+          //});
         });
     </script>
   </head>
@@ -210,7 +228,7 @@ make it possible to print/download menu
                <th>จำนวนแขก</th>
                <th>ราคา</th>
                <th>อาหารคาว</th>
-               <th>ของหวาน</th>
+               <th>ขนม/ผลไม้</th>
              </tr>
              <tr>
                <td>30-49 ท่าน</td>
@@ -229,7 +247,7 @@ make it possible to print/download menu
           <p class="lead">
           </p>
           <p class="lead">
-            รวมข้าวสวย ขนมจีน(สำหรับแกงเผ็ด) น้ำเปล่า น้ำแข็ง ผลไม้ ภาชนะอุ่นอาหาร จาน ชาม ช้อนส้อม แก้วน้ำ โต๊ะบุฟเฟต์
+            รวมข้าวสวย ขนมจีน(สำหรับแกงเผ็ด) น้ำเปล่า น้ำแข็ง ภาชนะอุ่นอาหาร จาน ชาม ช้อนส้อม แก้วน้ำ โต๊ะบุฟเฟต์
             พนักงานบริการ
           </p>
           <p class="lead">
@@ -247,14 +265,14 @@ make it possible to print/download menu
   <section id="about" class="content-section-a">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5 ml-auto">
+          <div class="col-lg-5 ml-auto" style="text-align: right">
             <h2 class="section-heading">รายการตัวอย่าง</h2>
             <hr class="section-heading-spacer-r">
             <div class="clearfix"></div>
           </div>
           <div class="col-lg-5 ml-auto">
           </div>
-          <div class="col-lg-5 ml-auto">
+          <div class="col-lg-3 ml-auto">
             <p class="lead">
               <u>อาหารคาว</u><br>
               1.	แกงรัญจวน<br>
@@ -262,33 +280,26 @@ make it possible to print/download menu
               3.	ข้าวผัดสมุนไพร-ปลาสลิด<br>
               4.	ไก่กรอบมะนาว<br>
               5.	เมี่ยงกลีบบัว<br>
-              6.	ขนมจีน<br>
-              7.	ข้าวสวย<br>
-              8.	น้ำแข็ง<br>
+              ขนมจีน<br>
+              ข้าวสวย<br>
               <br>
               <u>ของหวาน</u><br>
               1.	เปียกปูนกะทิสด<br>
               2.	เค้กชอคโกแล็ตหน้านิ่ม<br>
-              3.	แตงโม<br>
-              4.  สับปะรด<br>
-            </p>
-          </div>
-          <div class="col-lg-5 mr-auto">
-            <img class="img-fluid" src="img/indiv/แกงรัญจวน.jpg" alt="">
-          </div>
-          <div class="col-lg-5 mr-auto">
-            <img class="img-fluid" src="img/indiv/เปียกปูนกะทิสด.jpg" alt="">
-          </div>
-          <div class="col-lg-5 mr-auto">
-            <p class="lead">
-              ภาชนะอุ่นอาหาร
-              จาน ชาม ช้อนส้อม
-              แก้วน้ำ
-              โต๊ะบุฟเฟต์
-              พนักงานบริการ
-
+              <br>
+              ภาชนะอุ่นอาหาร<br>
+              จาน ชาม ช้อนส้อม<br>
+              น้ำเปล่า น้ำแข็ง แก้วน้ำ<br>
+              โต๊ะบุฟเฟต์<br>
+              พนักงานบริการ<br>
               บริการจัดตั้ง เก็บของ
             </p>
+          </div>
+          <div class="col-lg-3 mr-auto">
+            <img class="img-fluid" src="img/indiv/แกงรัญจวน.jpg" alt="แกงรัญจวน" style="padding: 5px;">
+          <!-- </div>
+          <div class="col-lg-5 mr-auto"> -->
+            <img class="img-fluid" src="img/indiv/เปียกปูนกะทิสด.jpg" alt="เปียกปูนกะทิสด" style="padding: 5px;">
           </div>
         </div>
       </div>
@@ -304,19 +315,22 @@ make it possible to print/download menu
         <div class="clearfix"></div>
       </div>
       <div class="row">
-        <div class="col-lg-5 ml-auto">
+        <div class="col-lg-6 ml-auto">
           <h3 align="center">รายการ 1<br>ประเภทแกง</h3>
           <div class="row">
             <div class="col">
-              <p class="lead" align="center">
+              <p class="lead" align="left">
                 <strong>แกงเผ็ด</strong><br>
                 แกงเขียวหวานไก่<br>
-                <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="เขียวหวานลูกชิ้นปลากราย.jpg">เขียวหวานลูกชิ้นปลากราย</span><br>
+                <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="เขียวหวานลูกชิ้นปลากราย.jpg">เขียวหวานลูกชิ้นปลากราย</span>
+                  <img class="img-thumbnail" src="img/indiv/เขียวหวานลูกชิ้นปลากราย.jpg" alt="เขียวหวานลูกชิ้นปลากราย ใบไม้พระจันทร์"><br>
                 แกงเขียวหวานหมูย่าง<br>
                 <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="แกงเผ็ดไก่.jpg">แกงเผ็ดไก่</span><br>
                 แกงกะหรี่ไก่<br>
-                <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="แกงมัสมั่นไก่.jpg">แกงมัสมั่นไก่</span><br>
-                <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="แกงรัญจวน.jpg">แกงรัญจวน</span><br>
+                <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="แกงมัสมั่นไก่.jpg">แกงมัสมั่นไก่</span>
+                  <img class="img-thumbnail" src="img/indiv/แกงมัสมั่นไก่.jpg" alt="แกงมัสมั่นไก่ ใบไม้พระจันทร์"><br>
+                <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="แกงรัญจวน.jpg">แกงรัญจวน</span>
+                  <img class="img-thumbnail" src="img/indiv/แกงรัญจวน.jpg" alt="แกงรัญจวน ใบไม้พระจันทร์"><br>
                 แกงบุ่มไบ่<br>
                 แกงต้มจิ๋วไก่<br>
                 แกงไก่พิโรธ<br>
@@ -334,7 +348,7 @@ make it possible to print/download menu
               </p>
               </div>
               <div class="col">
-              <p class="lead" align="center">
+              <p class="lead" align="left">
                 <strong>เเกงจืด</strong><br>
                 <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="เกาเหลาหมูตุ๋น.jpg">เกาเหลาหมูตุ๋น</span><br>
                 แกงจืดกะหล่ำปลียัดไส้<br>
@@ -650,6 +664,7 @@ make it possible to print/download menu
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="วุ้นตะไคร้ลอยแก้ว.jpg">วุ้นตะไคร้ลอยแก้ว</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="วุ้นลิ้นจี่.jpg">วุ้นลิ้นจี่</span><br>
               <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="หยกมณี.jpg">หยกมณี</span><br>
+              ผลไม้ตามฤดูกาล<br>
             </p>
           </div>
         </div>
@@ -698,7 +713,7 @@ make it possible to print/download menu
   <section id="alms" class="content-section-b">
     <div class="container">
       <div class="row">
-        <div class="col-lg-5 ml-auto">
+        <div class="col-lg-5 ml-auto" style="text-align: right">
           <h2 class="section-heading">เลี้ยงพระ</h2>
           <hr class="section-heading-spacer-r">
           <div class="clearfix"></div>
@@ -721,7 +736,7 @@ make it possible to print/download menu
   <section id="restaurant" class="content-section-a">
     <div class="container">
       <div class="row">
-        <div class="col-lg-5 mr-auto order-lg-2">
+        <div class="col-lg-5 mr-auto order-lg-2" style="text-align: left">
           <h2 class="section-heading">ร้านอาหารบุฟเฟต์<br>ของว่าง คาว หวาน ไทย จีน ฝรั่ง</h2>
           <hr class="section-heading-spacer">
           <div class="clearfix"></div>
@@ -755,10 +770,10 @@ make it possible to print/download menu
     <!-- /.container -->
   </section>
   <!-- /.content-section-a -->
-
   <section id="gallery" class="content-section-b">
     <div class="container">
       <h2 align="center">ดูรูป</h2>
+
       <hr class="section-heading-spacer-c" align="center" style="width: 200px;">
       <div class="row">
         <div class="column">
