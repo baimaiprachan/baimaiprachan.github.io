@@ -49,9 +49,7 @@ body, h2, h3, h4, h5, h6 {
 
 .img-thumbnail {
   width: 37px;
-  position: absolute;
-  clip: rect(0px,37px,27px,0px);
-  /*height: 27px;*/
+  height: 27px;
   padding: 0px;
   cursor: pointer;
   margin-right:0.2em
