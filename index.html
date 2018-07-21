@@ -92,29 +92,14 @@ make it possible to print/download menu
             modal.find('.modal-body input').val(name)
             modal.find('.modal-body .foodimg').attr('src', "img/indiv/"+imgurl);
 
-            $.ajax({
-                url:'text/'+name+'.txt',
-                type:'text',
-                error: function()
-                {
-                    //file not exists
-                },
-                success: function()
-                {
-                  $.get("text/"+name+".txt", function(data) {
-                    modal.find('.modal-body .desc').text(name)
-                  }, 'text');
-                }
-            });
-
-            //$.get("text/"+name+".txt", function(data) {
-              //modal.find('.modal-body .desc').text(name)
-            //}, 'text');
+            $.get("text/"+name+".txt", function(data) {
+              modal.find('.modal-body .desc').text(name)
+            }, 'text');
 
           });
-          //$("#indivDishModal").on("hidden.bs.modal", function(){
-          //    $(".desc").text("");
-          //});
+          $("#indivDishModal").on("hidden.bs.modal", function(){
+              $(".desc").text("");
+          });
         });
     </script>
   </head>
@@ -323,14 +308,17 @@ make it possible to print/download menu
                 <strong>แกงเผ็ด</strong><br>
                 แกงเขียวหวานไก่<br>
                 <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="เขียวหวานลูกชิ้นปลากราย.jpg">เขียวหวานลูกชิ้นปลากราย</span>
-                  <img class="img-thumbnail" src="img/indiv/เขียวหวานลูกชิ้นปลากราย.jpg" alt="เขียวหวานลูกชิ้นปลากราย ใบไม้พระจันทร์"><br>
+                <!--  <img class="img-thumbnail" src="img/indiv/เขียวหวานลูกชิ้นปลากราย.jpg" alt="เขียวหวานลูกชิ้นปลากราย ใบไม้พระจันทร์"><br>
+                -->
                 แกงเขียวหวานหมูย่าง<br>
                 <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="แกงเผ็ดไก่.jpg">แกงเผ็ดไก่</span><br>
                 แกงกะหรี่ไก่<br>
                 <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="แกงมัสมั่นไก่.jpg">แกงมัสมั่นไก่</span>
-                  <img class="img-thumbnail" src="img/indiv/แกงมัสมั่นไก่.jpg" alt="แกงมัสมั่นไก่ ใบไม้พระจันทร์"><br>
+                <!--  <img class="img-thumbnail" src="img/indiv/แกงมัสมั่นไก่.jpg" alt="แกงมัสมั่นไก่ ใบไม้พระจันทร์"><br>
+                -->
                 <span class="list-modal" data-toggle="modal" data-target="#indivDishModal" data-id="แกงรัญจวน.jpg">แกงรัญจวน</span>
-                  <img class="img-thumbnail" src="img/indiv/แกงรัญจวน.jpg" alt="แกงรัญจวน ใบไม้พระจันทร์"><br>
+                <!--  <img class="img-thumbnail" src="img/indiv/แกงรัญจวน.jpg" alt="แกงรัญจวน ใบไม้พระจันทร์"><br>
+                -->
                 แกงบุ่มไบ่<br>
                 แกงต้มจิ๋วไก่<br>
                 แกงไก่พิโรธ<br>
