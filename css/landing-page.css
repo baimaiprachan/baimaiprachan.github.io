@@ -52,7 +52,6 @@ body, h2, h3, h4, h5, h6 {
   height: 27px;
   padding: 0px;
   cursor: pointer;
-  margin-right:0.2em
 }
 
 #phone-number {
@@ -262,7 +261,6 @@ strong {
 /*      transition: transform 0.2s;
       transform: translateX(70px);*/
   }
-
 }
 
 .list-modal {
@@ -284,6 +282,11 @@ strong {
   font-size: 14px;
   font-weight: 800;
   color: black !important;
+}
+
+.menulink{
+  text-align: right;
+  font-size: 1.2em;
 }
 
 .content-section-a {
