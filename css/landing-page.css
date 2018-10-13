@@ -19,6 +19,10 @@ body, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+.lead{
+  font-size: 1.30rem;
+}
+
 /* Create three equal columns that floats next to each other */
 .column {
     width: 33%;
@@ -263,6 +267,10 @@ strong {
   }
 }
 
+.tab-content:active{
+  visibility: visible;
+}
+
 .list-modal {
   text-decoration: underline;
   color: brown;
@@ -417,6 +425,23 @@ p.copyright {
   margin: 15px 0 0;
 }
 
+thead .price-samples {
+  font-size: 20px;
+}
+
+.price-samples {
+  font-size: 20px;
+  background-color: #f4bea9;
+  border: 1px solid #808080;
+}
+
+tbody {
+  font-size: 18px;
+}
+
+.text-center {
+  border: 1px solid #808080;
+}
 
 #columns {
   column-width: 320px;
