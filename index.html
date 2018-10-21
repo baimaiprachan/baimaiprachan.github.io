@@ -73,6 +73,11 @@
               scrollTop: $("#about").offset().top-50
           }, 500);
       });
+      $("#in-the-news-btn").click(function() {
+          $('html, body').animate({
+              scrollTop: $("#in-the-news").offset().top-50
+          }, 500);
+      });
       $("#catering-buffet-btn").click(function() {
           $('html, body').animate({
               scrollTop: $("#catering-buffet").offset().top-50
@@ -156,6 +161,9 @@
               <a class="nav-link" id="about-btn">เกี่ยวกับเรา</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" id="in-the-news-btn">ในข่าว</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" id="catering-buffet-btn">จัดเลี้ยง +</a>
               <ul class="nav-link">
                 <a class="nav-link-sub" id="sample-menus-btn"><li>ตัวอย่างราคาจัดเลี้ยง</li></a>
@@ -237,12 +245,41 @@
         <!-- /.container -->
     </section>
 
-    <section id="catering-buffet" class="content-section-b">
+    <section id="in-the-news" class="content-section-b">
       <div class="container">
         <div class="row">
+          <div class="col-lg-5 ml-auto order-lg-1">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/n2Ywpe2rzc4">
+              </iframe>
+              <p>
+                <br>
+              </p>
+            </div>
+            <p>
+              <br>
+            </p>
+          </div>
           <div class="col-lg-5 mr-auto order-lg-2">
-            <h2 class="section-heading">จัดเลี้ยงบุฟเฟต์นอกสถานที่</h2>
+            <h2 class="section-heading">ใบไม้พระจันทร์ ในข่าว</h2>
             <hr class="section-heading-spacer">
+            <div class="clearfix">
+            </div>
+            <p class="lead">
+              <a href="https://www.facebook.com/DreamchaserNews1/">รายการคนล่าฝัน</a> จากช่อง
+              <a href="https://news1live.com/">NEWS 1</a> เข้ามาชิม และมาคุยกับใบไม้พระจันทร์เมื่อเดือนกันยายนที่ผ่านมาค่ะ
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catering-buffet" class="content-section-a">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 ml-auto order-lg-1">
+            <h2 class="section-heading">จัดเลี้ยงบุฟเฟต์นอกสถานที่</h2>
+            <hr class="section-heading-spacer-r">
             <div class="clearfix">
             </div>
             <p class="lead">
@@ -275,7 +312,8 @@
             </p>
             <p class="lead">
               <strong>รวม</strong><br>
-              ข้าวสวย ขนมจีน(สำหรับแกงเผ็ด) น้ำเปล่า น้ำแข็ง ภาชนะอุ่นอาหาร จาน ชาม ช้อนส้อม แก้วน้ำ โต๊ะบุฟเฟต์
+              ข้าวสวย ขนมจีน(สำหรับแกงเผ็ด) น้ำเปล่า น้ำแข็ง
+              ภาชนะอุ่นอาหาร จาน ชาม ช้อนส้อม แก้วน้ำ โต๊ะบุฟเฟต์
               พนักงานบริการ
             </p>
             <p class="lead">
@@ -286,14 +324,14 @@
             </p>
             <p class="lead"><a target="_blank" href="documents/รายการอาหารจัดเลี้ยง_ใบไม้พระจันทร์.pdf">ดาวโหลดเมนูได้ที่นี่</a></p>
           </div>
-          <div class="col-lg-5 ml-auto order-lg-1">
-            <img class="img-fluid" src="img/buffet_tables.jpg" alt="">
+          <div class="col-lg-5 mr-auto order-lg-2">
+            <img class="img-fluid" src="img/buffet_tables_cropped.jpg" alt="">
           </div>
         </div>
       </div>
     </section>
 
-    <section id="sample-menus" class="content-section-a">
+    <section id="sample-menus" class="content-section-a" style="padding: 0px 0px 50px 0px;">
       <div class="container">
         <!--ul class="nav nav-tabs justify-content-center">
           <li class="nav-item">
@@ -536,6 +574,10 @@
              </tr>
             </table>
             </div>
+          </p>
+          <p class="lead">
+            *หากจำนวนแขก 30-49 ท่าน เพิ่ม 20 บาทต่อท่าน หากจำนวนแขกน้อยกว่า 30 กรุณาแจ้งติดต่อทางร้าน เรายินดีประสานงานในรูปแบบอื่นๆค่ะ<br>
+            **เพิ่มเครื่องดื่มพิเศษ เพิ่ม 15 บาทต่อท่านต่อรายการ
           </p>
         </div>
       </div>
@@ -861,7 +903,7 @@
         </div>
         <div class="col-lg-7" align="center" style="margin: auto;">
           <h3>ขนมไทย - ขนมน้ำ (1 ชนิด)</h3>
-          <h4>ขนมเย็น</h4>
+          <h4><strong>ขนมเย็น</strong></h4>
           <div class="row">
             <div class="col">
               <p class="lead" align="center">
@@ -892,7 +934,7 @@
               </p>
             </div>
           </div>
-          <h4>ขนมร้อน</h4>
+          <h4><strong>ขนมร้อน</strong></h4>
           <div class="row">
             <div class="col">
               <p class="lead" align="center">
@@ -955,7 +997,7 @@
                 ถั่วแปบ
               </p>
             </div>
-            <div class="col" align="left">
+            <div class="col" align="center">
               <p class="lead">
                 เปียกปูนกะทิสด<br>
                 ผลไม้<br>
