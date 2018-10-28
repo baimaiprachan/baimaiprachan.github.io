@@ -68,6 +68,10 @@
 
     <script>
       $(document).ready(function(){
+        $(".navbar-collapse").click(function() {
+            $(this).collapse()
+        });
+
         $("#about-btn").click(function() {
             $('html, body').animate({
                 scrollTop: $("#about").offset().top-50
@@ -119,78 +123,48 @@
             }, 500);
         });
       });
-      $(document).on('click','.navbar-collapse.in',function(e) {
-          if( $(e.target).is('a:not(".dropdown-toggle")') ) {
-              $(this).collapse('hide');
-          }
-      });
     </script>
-
-
-
-    <!--script>
-        $(document).ready(function(){
-          $('#indivDishModal').on("show.bs.modal", function (event) {
-            var button = $(event.relatedTarget) // Button that triggered the modal
-            var name = button.data('id')
-            var imgurl = name+".jpg"
-            var modal = $(this)
-
-            modal.find('.modal-title').text(name)
-            modal.find('.modal-body input').val(name)
-            modal.find('.modal-body .foodimg').attr('src', "img/indiv/"+imgurl);
-
-            $.get("text/"+name+".txt", function(data) {
-              modal.find('.modal-body .desc').text(data)
-            }, 'text');
-
-          });
-          $("#indivDishModal").on("hidden.bs.modal", function(){
-              $(".desc").text("");
-          });
-        });
-    </script-->
-
   </head>
 
   <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">ใบไม้พระจันทร์</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" id="about-btn">เกี่ยวกับเรา</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="in-the-news-btn">ในข่าว</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="catering-buffet-btn">จัดเลี้ยง +</a>
-              <ul class="nav-link">
-                <a class="nav-link-sub" id="sample-menus-btn"><li>ตัวอย่างราคาจัดเลี้ยง</li></a>
-                <a class="nav-link-sub" id="mains-btn"><li>อาหารคาว</li></a>
-                <a class="nav-link-sub" id="desserts-btn"><li>ของหวาน</li></a>
-                <a class="nav-link-sub" id="alms-btn"><li>เลี้ยงพระ</li></a>
-                <a class="nav-link-sub" id="menupdf-btn" target="_blank" href="documents/รายการอาหารจัดเลี้ยง_ใบไม้พระจันทร์.pdf"><li>ดาวโหลดเมนู</li></a>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="restaurant-btn">ร้านอาหาร</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="gallery-btn">ดูรูป</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="contact-btn">ติดต่อเรา</a>
-            </li>
-          </ul>
-        </div>
+      <a class="navbar-brand" href="#">ใบไม้พระจันทร์</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive"
+      aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" id="about-btn">เกี่ยวกับเรา</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="in-the-news-btn">ในข่าว</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="catering-buffet-btn">จัดเลี้ยง +</a>
+            <ul class="nav-link">
+              <a class="nav-link-sub" id="sample-menus-btn"><li>ตัวอย่างราคาจัดเลี้ยง</li></a>
+              <a class="nav-link-sub" id="mains-btn"><li>อาหารคาว</li></a>
+              <a class="nav-link-sub" id="desserts-btn"><li>ของหวาน</li></a>
+              <a class="nav-link-sub" id="alms-btn"><li>เลี้ยงพระ</li></a>
+              <a class="nav-link-sub" id="menupdf-btn" target="_blank" href="documents/รายการอาหารจัดเลี้ยง_ใบไม้พระจันทร์.pdf"><li>ดาวโหลดเมนู</li></a>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="restaurant-btn">ร้านอาหาร</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="gallery-btn">ดูรูป</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-btn">ติดต่อเรา</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -249,7 +223,6 @@
             </div>
           </div>
         </div>
-        <!-- /.container -->
     </section>
 
     <section id="in-the-news" class="content-section-b">

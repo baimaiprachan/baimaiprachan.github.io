@@ -42,10 +42,10 @@ body, h2, h3, h4, h5, h6 {
 .column-gallery {
     width: 33%;
 }
-/*
-.content:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-}*/
+
+a .nav-link {
+  color: rgba(0,0,0,0.9);
+}
 
 .img-fluid {
   width: 100%;
@@ -237,6 +237,27 @@ strong {
   background-color: #a1ad82 !important;
   color: black;
   font-weight: bold;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
 }
 
 @media(max-width:767px) {
