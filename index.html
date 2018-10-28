@@ -68,6 +68,9 @@
 
     <script>
       $(document).ready(function(){
+        $('.navbar-toggler').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
         $("#about-btn").click(function() {
             $('html, body').animate({
                 scrollTop: $("#about").offset().top-50
@@ -131,7 +134,7 @@
         // only try to scroll to offset if target has been set in location hash
         if ( target != '' ){
           var $target = jQuery(target);
-          jQuery('html, body').stop().animate({
+          jQuery('html, body').animate({
           'scrollTop': $target.offset().top - 50},
           900,
           'swing',function () {
