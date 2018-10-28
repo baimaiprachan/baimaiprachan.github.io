@@ -68,10 +68,6 @@
 
     <script>
       $(document).ready(function(){
-        $(".navbar-collapse").click(function() {
-            $(this).collapse()
-        });
-
         $("#about-btn").click(function() {
             $('html, body').animate({
                 scrollTop: $("#about").offset().top-50
@@ -124,6 +120,27 @@
         });
       });
     </script>
+
+    <!--scrolling from external links -->
+    <script>
+      jQuery(document).ready(function(){
+        // run on DOM ready
+        // grab target from URL hash (i.e. www.mysite.com/page-a.html#target-name)
+        var target = window.location.hash;
+
+        // only try to scroll to offset if target has been set in location hash
+        if ( target != '' ){
+          var $target = jQuery(target);
+          jQuery('html, body').stop().animate({
+          'scrollTop': $target.offset().top - 50},
+          900,
+          'swing',function () {
+          window.location.hash = target - 40;
+          });
+        }
+      });
+    </script>
+
   </head>
 
   <body>
@@ -139,7 +156,7 @@
 
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" id="about-btn">เกี่ยวกับเรา</a>
           </li>
           <li class="nav-item">
