@@ -11,7 +11,7 @@
     <meta name="twitter:site" content="@baimaiprachan" />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/baimaiprachan/baimaiprachan.github.io/master/img/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A72.jpg" />
 
-    <meta property="og:url" content="http://baimaiprachan.github.io/" />
+    <meta property="og:url" content="http://www.baimaiprachan.com/" />
     <meta property="og:title" content="ใบไม้พระจันทร์ เคเธอริ่ง- จัดเลี้ยงนอกสถานที่" />
     <meta property="og:description" content="บุฟเฟต์ไทย จีน ฝรั่ง ของว่าง คาว และขนม ประณีต อร่อยและไม่ใส่สารเคมี ที่ย่านวัชรพล รามอินทรา" />
     <meta property="og:image" content="https://raw.githubusercontent.com/baimaiprachan/baimaiprachan.github.io/master/img/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A72.jpg" />
@@ -70,6 +70,11 @@
       $(document).ready(function(){
         $('.navbar-toggler').on('click', function(){
             $('.navbar-collapse').collapse('hide');
+        });
+        $("#top-btn").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#top").offset().top-50
+            }, 500);
         });
         $("#restaurant-btn").click(function() {
             $('html, body').animate({
@@ -153,152 +158,42 @@
       </div>
     </nav>
 
-      <!-- Page Content -->
-      <section id="about" class="content-section-a">
-          <div class="container">
-            <h2><br></h2>
-            <h2 align="center">รายการขนมฝรั่งยอดนิยม</h2>
-            <hr class="section-heading-spacer-c" align="center" style="width: 200px;">
-            <p class="lead" align="center">
-
-            </p>
-            <h5><br></h5>
-            <div class="row">
-              <div class="col-lg-5 ml-auto order-lg-1">
-                <img class="img-fluid" src="img/indiv/เครปซูเซท.jpg" alt="เครปซูเซท ขนมฝรั่ง ใบไม้พระจันทร์">
-              </div>
-              <div class="col-lg-5 mr-auto order-lg-2" align="left">
-                <h3>เครปซูเซท</h3>
-                <p class="lead">
-
-                </p>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <section id="about" class="content-section-b">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 ml-auto order-lg-1">
-                <img class="img-fluid" src="img/indiv/พายมะพร้าว.jpg" alt="พายมะพร้าวอ่อน ขนมฝรั่ง ใบไม้พระจันทร์">
-              </div>
-              <div class="col-lg-5 mr-auto order-lg-2" align="left">
-                <h3>พายมะพร้าวอ่อน</h3>
-                <p class="lead">
-
-                </p>
-            </div>
-          </div>
-      </section>
-
-      <section id="about" class="content-section-a">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 ml-auto order-lg-1">
-                <img class="img-fluid" src="img/indiv/คัสตาร์ด.jpg" alt="คัสตาร์ด ขนมฝรั่ง ใบไม้พระจันทร์">
-              </div>
-              <div class="col-lg-5 mr-auto order-lg-2" align="left">
-                <h3>คัสตาร์ด (custard)</h3>
-                <p class="lead">
-
-                </p>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <section id="about" class="content-section-b">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 ml-auto order-lg-1">
-                <img class="img-fluid" src="img/indiv/เค้กกล้วยหอม.jpg" alt="เค้กกล้วยหอม ขนมฝรั่ง ใบไม้พระจันทร์">
-              </div>
-              <div class="col-lg-5 mr-auto order-lg-2" align="left">
-                <h3>เค้กกล้วยหอม</h3>
-                <p class="lead">
-
-                </p>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <section id="about" class="content-section-a">
+    <section id="top" class="content-section-a">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
+          <h2><br></h2>
+          <h2 align="center">รายการขนมฝรั่งยอดนิยม</h2>
+          <hr class="section-heading-spacer-c" align="center" style="width: 200px;">
+          <p class="lead" align="center">
+
+          </p>
+          <h5><br></h5>
+          <div class="d-flex flex-row justify-content-center flex-wrap">
+            <div class="p-2 mt-auto my-flex-item">
+              <img class="img-fluid" src="img/indiv/เครปซูเซท.jpg" alt="เครปซูเซท ขนมฝรั่ง ใบไม้พระจันทร์">
+            </div>
+            <div class="p-2 mt-auto my-flex-item">
+              <img class="img-fluid" src="img/indiv/คัสตาร์ด.jpg" alt="คัสตาร์ด ขนมฝรั่ง ใบไม้พระจันทร์">
+            </div>
+            <div class="p-2 mt-auto my-flex-item" align="left">
+              <img class="img-fluid" src="img/indiv/พายมะพร้าว.jpg" alt="พายมะพร้าวอ่อน ขนมฝรั่ง ใบไม้พระจันทร์">
+            </div>
+            <div class="p-2 mt-auto my-flex-item" align="left">
+              <img class="img-fluid" src="img/indiv/เค้กกล้วยหอม.jpg" alt="เค้กกล้วยหอม ขนมฝรั่ง ใบไม้พระจันทร์">
+            </div>
+            <div class="p-2 mt-auto my-flex-item" align="left">
               <img class="img-fluid" src="img/indiv/บลูเบอรรี่ชีสพาย.jpg" alt="บลูเบอรรี่ชีสพาย ขนมฝรั่ง ใบไม้พระจันทร์">
             </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>บลูเบอรรี่ชีสพาย</h3>
-              <p class="lead">
-
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/เค้กชอคโกแล็ตหน้านิ่ม.jpg" alt="เค้กชอคโกแล็ตหน้านิ่ม ขนมฝรั่ง ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>เค้กชอคโกแล็ตหน้านิ่ม</h3>
-              <p class="lead">
-
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/เค้กกาแฟ.jpg" alt="เค้กกาแฟ ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>เค้กกาแฟ</h3>
-              <p class="lead">
-
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
+            <div class="p-2 mt-auto my-flex-item">
               <img class="img-fluid" src="img/indiv/เค้กผลไม้.jpg" alt="เค้กผลไม้ ขนมฝรั่ง ใบไม้พระจันทร์">
             </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>เค้กผลไม้</h3>
-              <p class="lead">
-
-              </p>
+            <div class="p-2 mt-auto my-flex-item">
+              <img class="img-fluid" src="img/indiv/เค้กกาแฟ.jpg" alt="เค้กกาแฟ ขนมไทย ใบไม้พระจันทร์">
             </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
+            <div class="p-2 mt-auto my-flex-item" align="left">
               <img class="img-fluid" src="img/indiv/พายมะนาว.jpg" alt="พายมะนาว ขนมฝรั่ง ใบไม้พระจันทร์">
             </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>พายมะนาว</h3>
-              <p class="lead">
-
-              </p>
+            <div class="p-2 mt-auto my-flex-item" align="left">
+              <img class="img-fluid" src="img/indiv/เค้กชอคโกแล็ตหน้านิ่ม.jpg" alt="เค้กชอคโกแล็ตหน้านิ่ม ขนมฝรั่ง ใบไม้พระจันทร์">
             </div>
           </div>
         </div>
@@ -344,14 +239,79 @@
       <div class="container">
         <h2 align="center">ดูรูป</h2>
         <hr class="section-heading-spacer-c" align="center" style="width: 200px;">
-        <div class="row">
+        <div class="d-flex flex-row justify-content-center flex-wrap">
           <div class="column">
             <div class="content">
-              <a target="_blank" href="catering-pics.html">
+              <a target="_blank" href="savory1-pics.html">
                 <div class="card">
-                  <img src="img\buffet_tables.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
+                  <img src="img\indiv\แกงเลียง.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
                   <div class="container">
-                    <h4><b>รูปการจัดเลี้ยง</b></h4>
+                    <h4><b>อาหารคาว รายการ 1</b></h4>
+                    <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <a target="_blank" href="savory2-pics.html">
+                <div class="card">
+                  <img src="img\indiv\ยำปลาทอดผลไม้.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
+                  <div class="container">
+                    <h4><b>อาหารคาว รายการ 2</b></h4>
+                    <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <a target="_blank" href="savory3-pics.html">
+                <div class="card">
+                  <img src="img\indiv\กุ้งโสร่ง.jpg" alt="กุ้งโสร่ง จัดเลี้ยง รายการ 3 ใบไม้พระจันทร์" style="width:100%">
+                  <div class="container">
+                    <h4><b>อาหารคาว รายการ 3</b></h4>
+                    <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <a target="_blank" href="savory4-pics.html">
+                <div class="card">
+                  <img src="img\indiv\กุ้งผัดผงกะหรี่.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
+                  <div class="container">
+                    <h4><b>อาหารคาว รายการ 4</b></h4>
+                    <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <a target="_blank" href="savory5-pics.html">
+                <div class="card">
+                  <img src="img\indiv\กระทงทอง.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
+                  <div class="container">
+                    <h4><b>อาหารคาว รายการ 5</b></h4>
+                    <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <a target="_blank" href="savory6-pics.html">
+                <div class="card">
+                  <img src="img\indiv\แกงเจ้าเต่า.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
+                  <div class="container">
+                    <h4><b>อาหารคาว รายการพิเศษ</b></h4>
                     <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
                   </div>
                 </div>
@@ -373,11 +333,22 @@
           </div>
           <div class="column">
             <div class="content">
-              <a target="_blank" href="western-desserts-pics.html">
+              <div class="card btn" id="top-btn" >
+                <img src="img\indiv\เครปซูเซท.jpg" alt="เครปซูเซท ขนมฝรั่ง ใบไม้พระจันทร์" style="width:100%">
+                <div class="container">
+                  <h4><b>ของหวานฝรั่ง</b></h4>
+                  <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <a target="_blank" href="catering-pics.html">
                 <div class="card">
-                  <img src="img\indiv\เครปซูเซท.jpg" alt="เครปซูเซท ขนมฝรั่ง ใบไม้พระจันทร์" style="width:100%">
+                  <img src="img\buffet_tables.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
                   <div class="container">
-                    <h4><b>ของหวานฝรั่ง</b></h4>
+                    <h4><b>รูปการจัดเลี้ยง</b></h4>
                     <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
                   </div>
                 </div>
@@ -494,7 +465,7 @@
             style="display: inline; width: 72px; height: 28px;"
             data-lang="en"
             data-type="share-a"
-            data-url="https://baimaiprachan.github.io/">
+            data-url="https://www.baimaiprachan.com/">
           </div>
           <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
           <div class="box">
@@ -509,7 +480,7 @@
           </div>
           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
           class="twitter-share-button"
-          data-url="https://baimaiprachan.github.io/"
+          data-url="https://www.baimaiprachan.com/"
           data-via="baimaiprachan"
           data-show-count="false">
           TweetNow</a>

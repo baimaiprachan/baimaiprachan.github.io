@@ -11,8 +11,8 @@
     <meta name="twitter:site" content="@baimaiprachan" />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/baimaiprachan/baimaiprachan.github.io/master/img/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A72.jpg" />
 
-    <meta property="og:url" content="http://baimaiprachan.github.io/" />
-    <meta property="og:title" content="ใบไม้พระจันทร์ เคเธอริ่ง- จัดเลี้ยงนอกสถานที่" />
+    <meta property="og:url" content="http://www.baimaiprachan.com/catering-pics.html" />
+    <meta property="og:title" content="ใบไม้พระจันทร์ เคเธอริ่ง- ภาพการจัดเลี้ยงนอกสถานที่" />
     <meta property="og:description" content="บุฟเฟต์ไทย จีน ฝรั่ง ของว่าง คาว และขนม ประณีต อร่อยและไม่ใส่สารเคมี ที่ย่านวัชรพล รามอินทรา" />
     <meta property="og:image" content="https://raw.githubusercontent.com/baimaiprachan/baimaiprachan.github.io/master/img/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A72.jpg" />
 
@@ -70,6 +70,11 @@
       $(document).ready(function(){
         $('.navbar-toggler').on('click', function(){
             $('.navbar-collapse').collapse('hide');
+        });
+        $("#top-btn").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#top").offset().top-50
+            }, 500);
         });
         $("#restaurant-btn").click(function() {
             $('html, body').animate({
@@ -154,10 +159,10 @@
     </nav>
 
       <!-- Page Content -->
-      <section id="about" class="content-section-a">
+      <section id="top" class="content-section-a">
           <div class="container">
             <h2><br></h2>
-            <h2 align="center">ภาพการจัดเลี้ยงนอกสถานที่</h2>
+            <h2 align="center">ภาพการจัดเลี้ยง</h2>
             <hr class="section-heading-spacer-c" align="center" style="width: 200px;">
             <p class="lead" align="center">
 
@@ -174,7 +179,7 @@
                 <img class="img-fluid" src="img/plating2.jpg" alt="ภาชนะ จัดเลี้ยง ใบไม้พระจันทร์">
               </div>
               <div class="p-2 mt-auto my-flex-item" align="left">
-                <img class="img-fluid" src="img/สำรับขันโตก.jpg" alt="บุฟเฟต์ จัดเลี้ยง ใบไม้พระจันทร์">
+                <img class="img-fluid" src="img/สำรับขันโตก.jpg" alt="สำรับขันโตก เลี้ยงพระ จัดเลี้ยง ใบไม้พระจันทร์">
               </div>
             </div>
           </div>
@@ -251,7 +256,7 @@
             <div class="content">
               <a target="_blank" href="savory3-pics.html">
                 <div class="card">
-                  <img src="img\indiv\โป๊ะแตก.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
+                  <img src="img\indiv\กุ้งโสร่ง.jpg" alt="กุ้งโสร่ง จัดเลี้ยง รายการ 3 ใบไม้พระจันทร์" style="width:100%">
                   <div class="container">
                     <h4><b>อาหารคาว รายการ 3</b></h4>
                     <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
@@ -327,14 +332,13 @@
           </div>
           <div class="column">
             <div class="content">
-              <a target="_blank" href="catering-pics.html">
-                <div class="card">
-                  <img src="img\buffet_tables.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
-                  <div class="container">
-                    <h4><b>รูปการจัดเลี้ยง</b></h4>
-                    <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
-                  </div>
+              <div class="card btn" id="top-btn" >
+                <img src="img\buffet_tables.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
+                <div class="container">
+                  <h4><b>รูปการจัดเลี้ยง</b></h4>
+                  <p>กดดูภาพและคำบรรยายเพิ่มเติม...</p>
                 </div>
+              </div>
               </a>
             </div>
           </div>
@@ -463,7 +467,7 @@
           </div>
           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
           class="twitter-share-button"
-          data-url="https://baimaiprachan.github.io/"
+          data-url="https://www.baimaiprachan.com/"
           data-via="baimaiprachan"
           data-show-count="false">
           TweetNow</a>
