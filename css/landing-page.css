@@ -247,7 +247,6 @@ strong {
   column-count: 2;
   column-gap: 0px;
   padding: 2px;
-  break-inside: avoid;
 }
 
 .my-flex-item {
