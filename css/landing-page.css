@@ -243,8 +243,16 @@ strong {
   font-weight: bold;
 }
 
+.my-flex-container {
+  column-count: 2;
+  column-gap: 0px;
+  padding: 2px;
+  break-inside: avoid;
+}
+
 .my-flex-item {
   width: 540px;
+  text-align: center;
 }
 
 .card {

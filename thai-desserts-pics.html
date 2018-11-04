@@ -11,7 +11,7 @@
     <meta name="twitter:site" content="@baimaiprachan" />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/baimaiprachan/baimaiprachan.github.io/master/img/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A72.jpg" />
 
-    <meta property="og:url" content="http://www.baimaiprachan.com/" />
+    <meta property="og:url" content="http://www.baimaiprachan.com/thai-desserts-pics.html" />
     <meta property="og:title" content="ใบไม้พระจันทร์ เคเธอริ่ง- จัดเลี้ยงนอกสถานที่" />
     <meta property="og:description" content="บุฟเฟต์ไทย จีน ฝรั่ง ของว่าง คาว และขนม ประณีต อร่อยและไม่ใส่สารเคมี ที่ย่านวัชรพล รามอินทรา" />
     <meta property="og:image" content="https://raw.githubusercontent.com/baimaiprachan/baimaiprachan.github.io/master/img/%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%A72.jpg" />
@@ -70,6 +70,11 @@
       $(document).ready(function(){
         $('.navbar-toggler').on('click', function(){
             $('.navbar-collapse').collapse('hide');
+        });
+        $("#top-btn").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#top").offset().top-50
+            }, 500);
         });
         $("#restaurant-btn").click(function() {
             $('html, body').animate({
@@ -153,40 +158,31 @@
       </div>
     </nav>
 
-      <!-- Page Content -->
-      <section id="about" class="content-section-a">
-          <div class="container">
-            <h2><br></h2>
-            <h2 align="center">รายการของหวานไทยยอดนิยม</h2>
-            <hr class="section-heading-spacer-c" align="center" style="width: 200px;">
-            <p class="lead" align="center">
-            ร้านใบไม้พระจันทร์ เรียนเชิญท่านที่ชอบทานขนมไทย มาลิ้มลองขนมรสชาติบ้านๆ ที่ยังไม่เป็นอุตสาหกรรมดูค่ะ
-            </p>
-            <h5><br></h5>
-            <div class="row">
-              <div class="col-lg-5 ml-auto order-lg-1">
+    <section id="top" class="content-section-a">
+        <div class="container">
+          <h2><br></h2>
+          <h1 align="center">ขนมไทย</h1>
+          <hr class="section-heading-spacer-c" align="center" style="width: 200px;">
+          <p class="lead" align="center">
+          ร้านใบไม้พระจันทร์ เรียนเชิญท่านที่ชอบทานขนมไทย มาลิ้มลองขนมรสชาติบ้านๆ ที่ยังไม่เป็นอุตสาหกรรมดูค่ะ
+          </p>
+          <h2 align="center"><strong>ขนมน้ำ - ขนมเย็น</strong></h2>
+          <div class="d-flex flex-row justify-content-center flex-wrap">
+            <div class="p-2 my-flex-item">
+              <div>
                 <img class="img-fluid" src="img/indiv/อินทนิล.jpg" alt="อินทนิล ขนมไทย ใบไม้พระจันทร์">
-              </div>
-              <div class="col-lg-5 mr-auto order-lg-2" align="left">
-                <h3>อินทนิล</h3>
-                <p class="lead">
+                <h3 class="p-1">อินทนิล</h3>
+                <p class="p-1 lead">
                   เป็นขนมไทยโบราณที่หาทานยาก ทำจากแป้งกวนกับใบเตย ทำให้หอมใบเตยกับน้ำกะทิ
                   ทานกับน้ำแข็งไส เป็นขนมที่ต้องใช้เวลากวนนานมาก คนจึงไม่นิยมทำกันค่ะ
                 </p>
               </div>
             </div>
-          </div>
-      </section>
-
-      <section id="about" class="content-section-b">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 ml-auto order-lg-1">
+            <div class="p-2 my-flex-item">
+              <div>
                 <img class="img-fluid" src="img/indiv/ส้มฉุน.jpg" alt="ส้มฉุน ขนมไทย ใบไม้พระจันทร์">
-              </div>
-              <div class="col-lg-5 mr-auto order-lg-2" align="left">
-                <h3>ส้มฉุน</h3>
-                <p class="lead">
+                <h3 class="p-1">ส้มฉุน</h3>
+                <p class="p-1 lead">
                   มีการกล่าวถึงขนมส้มฉุนในบทกาพย์เห่ชมเครื่องคาวหวาน
                   บทพระราชนิพนธ์ในพระบาทสมเด็จพระพุทธเลิศหล้านภาลัย
                   ส้มฉุนจะมีลิ้นจี่เป็นหลัก และผลไม้อื่นๆตามฤดูกาล
@@ -194,17 +190,222 @@
                   มะม่วงดิบ เป็นการผสมผสานที่ไม่น่าเข้ากันได้ แต่กลับทำให้ขนมมีรสชาติเข้มข้นขึ้น
                   ต้องชมคนสมัยก่อนที่สามารถนำมาผสมผสานกันได้อย่างลงตัวค่ะ
                 </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/สาลิกาเล่นน้ำ.jpg" alt="สาลิกาเล่นน้ำ ขนมไทย ใบไม้พระจันทร์">
+                <h3 class="p-1">สาลิกาเล่นน้ำ</h3>
+                <p class="p-1 lead">
+                  คือบัวลอยสาคู ปรุงแต่งให้มีสีคละกันเหมือนนกสาลิกา แช่ในน้ำกะทิจนตัวเอง ทานกับขนุนและน้ำแข็งไสค่ะ
+                </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/แก้วชิงดวง.jpg" alt="แก้วชิงดวง ขนมไทย ใบไม้พระจันทร์">
+                <h3 class="p-1">แก้วชิงดวง</h3>
+                <p class="p-1 lead">
+                  เป็นขนมที่ทานประจำตั้งแต่เด็ก กว่า 50 ปีแล้ว คล้ายทับทิมกรอบ แต่ใช้ข้าวโพดแทนแห้ว
+                  ให้รสชาติที่ต่างจากทับทิมกรอบ หอมกรุ่นเพราะกลิ่นกะทิ ทานกับน้ำแข็งกรุบๆชื่นใจค่ะ
+                </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/กระท้อนลอยแก้ว.jpg" alt="กระท้อนลอยแก้ว ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ข้าวต้มน้ำวุ้น.jpg" alt="ข้าวต้มน้ำวุ้น ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/เต้าทึงน้ำลำไย.jpg" alt="เต้าทึงน้ำลำไย ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ลอดช่อง-แตงไทย.jpg" alt="ลอดช่อง-แตงไทย ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ลูกตาลลอยแก้ว.jpg" alt="ลูกตาลลอยแก้ว ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/วุ้นตะไคร้ลอยแก้ว.jpg" alt="วุ้นตะไคร้ลอยแก้ว ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ส้มเช้งลอยแก้ว.jpg" alt="ส้มเช้งลอยแก้ว ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/สาคูแคนตาลูป.jpg" alt="สาคูแคนตาลูป ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/วุ้นลิ้นจี่ลอยแก้ว.jpg" alt="วุ้นลิ้นจี่ลอยแก้ว ขนมไทย ใบไม้พระจันทร์">
+              </div>
             </div>
           </div>
-      </section>
 
-      <section id="about" class="content-section-a">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 ml-auto order-lg-1">
-                <img class="img-fluid" src="img/indiv/ขนมเหนียว.jpg" alt="ขนมเหนียว ขนมไทย ใบไม้พระจันทร์">
+          <h2><br></h2>
+          <h2 align="center"><strong>ขนมน้ำ - ขนมร้อน</strong></h2>
+          <div class="d-flex flex-row justify-content-center flex-wrap">
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/บัวลอยหลากสี.jpg" alt="บัวลอยหลากสี ขนมไทย ใบไม้พระจันทร์">
+                <h3>บัวลอยหลากสี</h3>
+                <p class="lead">
+                  ต้องมีกลิ่นและรสที่ตรงกับสีด้วยค่ะ เช่น สีเขียวหอมใบเตย สีม่วงรสเผือก และสีแสดรสฟักทอง
+                  ทานกับกะทิอบควันเทียนหอมๆ หากลองชิมแล้วมีแต่กลิ่นและรสของแป้ง ไม่ใช่บัวลอยใบไม้พระจันทร์แน่ค่ะ
+                </p>
               </div>
-              <div class="col-lg-5 mr-auto order-lg-2" align="left">
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ดาวล้อมเดือน.jpg" alt="ดาวล้อมเดือน ขนมไทย ใบไม้พระจันทร์">
+                <h3>ดาวล้อมเดือน</h3>
+                <p class="lead">
+                  เป็นขนมไทยเก่าแก่ ทำจากแป้งคล้ายบัวลอย แต่สอดไส้ถั่วเขียวบดกับเกลือและพริกไทย
+                  ทานกับน้ำกะทิร้อนๆ เหมาะกับหลายๆท่านที่ไม่ต้องการทานขนมหวานมากค่ะ
+                </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/บัวลอยน้ำขิง.jpg" alt="บัวลอยน้ำขิง ขนมไทย ใบไม้พระจันทร์">
+                <h3>บัวลอยน้ำขิง</h3>
+                <p class="lead">
+                  เป็นขนมที่ได้รับอิทธิพลจากจีน ตัวบัวลอยสอดไส้งาดำ ทานกับแป้งหนียวหนุบหนับและน้ำขิงร้อนๆ
+                  ขมหน่อยๆ ทานแล้วชื่นคอไม่เลี่ยน ไม่เหมือนขนมหลายอย่างที่หวานเจื้อยค่ะ
+                </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/บัวลอยฟักทอง.jpg" alt="บัวลอยฟักทอง ขนมไทย ใบไม้พระจันทร์">
+                <h3>บัวลอยฟักทอง</h3>
+                <p class="lead">
+                  ทางร้านทำจากเนื้อฟักทองผสมแป้ง ไม่ได้ใส่สีใส่กลิ่น ทำให้ได้ความหวานจากฟักทองจริงๆ
+                  ปั้นเป็นฟักทองลูกเล็กๆ น่ารักดี และเหมาะกับเทศกาล Halloween ค่ะ
+                </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ขนมโคกะทิ.jpg" alt="ขนมโคกะทิ ขนมไทย ใบไม้พระจันทร์">
+                <h3>ขนมโคกะทิ</h3>
+                <p class="lead">
+                  ขนมโคกะทิ เป็น signature dish ของทางร้านค่ะ ตัวขนมเป็นมะพร้าวขูดผัดกับน้ำตาลมะพร้าว
+                  ห่อด้วยแป้งสีต่างๆ ต้มแล้วนำไปแช่ในหัวกะทิ จะให้อร่อยต้องผัดให้ไส้หวานๆเยิ้มๆไม่แห้ง
+                  ซึ่งลูกๆหลานๆบอกว่าเป็นการ “เพิ่มความฟิน” เวลากัดเข้าไปในตัวขนมค่ะ
+                </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/บัวลอยมะพร้าวอ่อน.jpg" alt="บัวลอยมะพร้าวอ่อน ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ข้าวเหนียวดำเปียกเผือก.jpg" alt="ข้าวเหนียวดำเปียกเผือก ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ข้าวเหนียวถั่วดำ.jpg" alt="ข้าวเหนียวถั่วดำ ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item" align="center">
+              <!--div-->
+                <img class="img-fluid" src="img/indiv/ข้าวเหนียวเปียกลำไย.jpg" alt="ข้าวเหนียวเปียกลำไย ขนมไทย ใบไม้พระจันทร์">
+              <!--/div-->
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/เต้าทึงเวียดนาม.jpg" alt="เต้าทึงเวียดนาม ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/เต้าส่วน.jpg" alt="เต้าส่วน ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/เต้าฮวยน้ำขิง.jpg" alt="เต้าฮวยน้ำขิง ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/บัวลอยไข่เค็ม.jpg" alt="บัวลอยไข่เค็ม ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/บัวลอยไข่หวาน.jpg" alt="บัวลอยไข่หวาน ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/บัวลอยสาคู.jpg" alt="บัวลอยสาคู ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/บัวลอยเผือก.jpg" alt="บัวลอยเผือก ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/กล้วยบวชชี.jpg" alt="กล้วยบวชชี ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/มันต้มน้ำขิง.jpg" alt="มันต้มน้ำขิง ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+          </div>
+
+          <h2><br></h2>
+          <h2 style="text-align: center;"><strong>ขนมแห้ง</strong></h2>
+          <div class="d-flex flex-row justify-content-center flex-wrap">
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/หยกมณี.jpg" alt="หยกมณี ขนมไทย ใบไม้พระจันทร์">
+                <h3>หยกมณี</h3>
+                <p class="lead">
+                ทำจากสาคูกวนกับน้ำใบเตย คลุกมะพร้าว รสชาติหวานๆ เค็มๆ ไม่หวานมาก ทานเพลินๆ
+                แต่เนื่องด้วยเป็นขนมสด ทำให้เก็บไว้ได้ไม่นาน คนจึงไม่นิยมทำขาย และหาทานยากในสมัยนี้
+                ชื่อเป็นมงคล นิยมนำไปเป็นของฝากค่ะ
+                </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ขนมเรไร.jpg" alt="ขนมเรไร ขนมไทย ใบไม้พระจันทร์">
+                <h3>ขนมเรไร</h3>
+                <p class="lead">
+                  เป็นขนมที่ขนมที่ได้ชื่อนี้เพราะดูเหมือนรังของตัวเรไรค่ะ ตัวรังเป็นแป้ง นำมาบีบเป็นเส้นบางๆ
+                  ทานกับมะพร้าวทึนทึก น้ำตาล เกลือ งาคั่ว และหัวกะทิหอมๆ
+                </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ขนมเหนียว.jpg" alt="ขนมเหนียว ขนมไทย ใบไม้พระจันทร์">
                 <h3>ขนมเหนียว</h3>
                 <p class="lead">
                   เป็นขนมไทยโบราณ ตัวขนมเป็นแป้งที่มีความอ่อนนุ่มและเหนียวสมชื่อ
@@ -217,278 +418,136 @@
                 </p>
               </div>
             </div>
-          </div>
-      </section>
-
-      <section id="about" class="content-section-b">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 ml-auto order-lg-1">
-                <img class="img-fluid" src="img/indiv/ขนมเรไร.jpg" alt="ขนมเรไร ขนมไทย ใบไม้พระจันทร์">
-              </div>
-              <div class="col-lg-5 mr-auto order-lg-2" align="left">
-                <h3>ขนมเรไร</h3>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/เล็บมือนาง2.jpg" alt="เล็บมือนาง ขนมไทย ใบไม้พระจันทร์">
+                <h3>ขนมเล็บมือนาง</h3>
                 <p class="lead">
-                  เป็นขนมที่ขนมที่ได้ชื่อนี้เพราะดูเหมือนรังของตัวเรไรค่ะ ตัวรังเป็นแป้ง นำมาบีบเป็นเส้นบางๆ
-                  ทานกับมะพร้าวทึนทึก น้ำตาล เกลือ งาคั่ว และหัวกะทิหอมๆ
+                หรือ ขนมด้วง เป็นขนมไทยที่ทำจากแป้งสามชนิด  คลึงเป็นรูปนิ้วมือ
+                รับประทานกับเครื่องปรุงหอมๆอันได้แก่มะพร้าวขูด งา และหัวกะทิค่ะ
                 </p>
               </div>
             </div>
-          </div>
-      </section>
-
-    <section id="about" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/หยกมณี.jpg" alt="หยกมณี ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>หยกมณี</h3>
-              <p class="lead">
-                ทำจากสาคูกวนกับน้ำใบเตย คลุกมะพร้าว รสชาติหวานๆ เค็มๆ ไม่หวานมาก ทานเพลินๆ
-                แต่เนื่องด้วยเป็นขนมสด ทำให้เก็บไว้ได้ไม่นาน คนจึงไม่นิยมทำขาย และหาทานยากในสมัยนี้
-                ชื่อเป็นมงคล นิยมนำไปเป็นของฝากค่ะ
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/เล็บมือนาง2.jpg" alt="เล็บมือนาง ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>ขนมเล็บมือนาง</h3>
-              <p class="lead">
-                หรือ ขนมด้วง เป็นขนมไทยที่ทำจากแป้งสามชนิด  คลึงเป็นรูปนิ้วมือ
-                รับประทานกับเครื่องปรุงหอมๆอันได้แก่มะพร้าวขูด งา และหัวกะทิค่ะ
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/กล้วยหักมุกเชื่อม.jpg" alt="กล้วยหักมุกเชื่อม ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>กล้วยเชื่อม</h3>
-              <p class="lead">
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/กล้วยหินเชื่อม.jpg" alt="กล้วยหินเชื่อม ขนมไทย ใบไม้พระจันทร์">
+                <h3>กล้วยเชื่อม</h3>
+                <p class="lead">
                 ทางร้านจะใช้กล้วย 3 ชนิดตามที่หาซื้อได้ คือ กล้วยไข่ กล้วยหักมุก
                 และกล้วยหิน ซึ่งจะมีรสชาติและความเหนียวต่างกันไป แนะนำให้ทานสะสมครบทุกกล้วยค่ะ
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/ขนมกล้วย.jpg" alt="ขนมกล้วย ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>ขนมกล้วย</h3>
-              <p class="lead">
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ขนมกล้วย.jpg" alt="ขนมกล้วย ขนมไทย ใบไม้พระจันทร์">
+                <h3>ขนมกล้วย</h3>
+                <p class="lead">
                 เป็นขนมพื้นบ้านของไทย ความอร่อยของขนมขึ้นอยู่กับสัดส่วนของกล้วยและแป้ง
                 โดยทางร้านใช้กล้วยที่สุกพอดีเป็นส่วนผสมหลัก ใช้แป้งพอให้ขนมอยู่ตัวพอจะนึ่งได้เท่านั้น
                 ขนมกล้วยจึงเป็นขนมที่ไม่สามารถทำให้อร่อยโดยทางลัดได้
                 และเป็นขนมที่ไม่มีที่ให้สิ่งแปลกปลอมซ่อนตัวเข้าไป เพราะหากใส่แป้งมากเกินไป
                 หรือใส่สารกันบูด ขนมจะกระด้าง ไม่นุ่ม ผู้ทานจะรู้สึกได้ทันทีค่ะ
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/บัวลอยหลากสี.jpg" alt="บัวลอยหลากสี ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>บัวลอยหลากสี</h3>
-              <p class="lead">
-                ต้องมีกลิ่นและรสที่ตรงกับสีด้วยค่ะ เช่น สีเขียวหอมใบเตย สีม่วงรสเผือก และสีแสดรสฟักทอง
-                ทานกับกะทิอบควันเทียนหอมๆ หากลองชิมแล้วมีแต่กลิ่นและรสของแป้ง ไม่ใช่บัวลอยใบไม้พระจันทร์แน่ค่ะ
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/สาลิกาเล่นน้ำ.jpg" alt="สาลิกาเล่นน้ำ ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>สาลิกาเล่นน้ำ</h3>
-              <p class="lead">
-                คือบัวลอยสาคู ปรุงแต่งให้มีสีคละกันเหมือนนกสาลิกา แช่ในน้ำกะทิจนตัวเอง ทานกับขนุนและน้ำแข็งไสค่ะ
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/ขนมถั่วแปบ.jpg" alt="ขนมถั่วแปบ ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>ถั่วแปบ</h3>
-              <p class="lead">
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ถั่วแปบ.jpg" alt="ขนมถั่วแปบ ขนมไทย ใบไม้พระจันทร์">
+                <h3>ถั่วแปบ</h3>
+                <p class="lead">
                 ทำจากแป้งห่อถั่วเขียว โรยมะพร้าวขูดฝอย ทานกับน้ำตาลเกลือ เป็นขนมที่ทานบ่อยตอนเด็กๆ
                 และมักเห็นในงานมงคล อยากให้พาเด็กๆรุ่นใหม่มาลองทานกันค่ะ
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/แก้วชิงดวง.jpg" alt="แก้วชิงดวง ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>แก้วชิงดวง</h3>
-              <p class="lead">
-                เป็นขนมที่ทานประจำตั้งแต่เด็ก กว่า 50 ปีแล้ว คล้ายทับทิมกรอบ แต่ใช้ข้าวโพดแทนแห้ว
-                ให้รสชาติที่ต่างจากทับทิมกรอบ หอมกรุ่นเพราะกลิ่นกะทิ ทานกับน้ำแข็งกรุบๆชื่นใจค่ะ
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/ดาวล้อมเดือน.jpg" alt="ดาวล้อมเดือน ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>ดาวล้อมเดือน</h3>
-              <p class="lead">
-                เป็นขนมไทยเก่าแก่ ทำจากแป้งคล้ายบัวลอย แต่สอดไส้ถั่วเขียวบดกับเกลือและพริกไทย
-                ทานกับน้ำกะทิร้อนๆ เหมาะกับหลายๆท่านที่ไม่ต้องการทานขนมหวานมากค่ะ
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/บัวลอยน้ำขิง.jpg" alt="บัวลอยน้ำขิง ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>บัวลอยน้ำขิง</h3>
-              <p class="lead">
-                เป็นขนมที่ได้รับอิทธิพลจากจีน ตัวบัวลอยสอดไส้งาดำ ทานกับแป้งหนียวหนุบหนับและน้ำขิงร้อนๆ
-                ขมหน่อยๆ ทานแล้วชื่นคอไม่เลี่ยน ไม่เหมือนขนมหลายอย่างที่หวานเจื้อยค่ะ
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="about" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/บัวลอยฟักทอง.jpg" alt="บัวลอยฟักทอง ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>บัวลอยฟักทอง</h3>
-              <p class="lead">
-                ทางร้านทำจากเนื้อฟักทองผสมแป้ง ไม่ได้ใส่สีใส่กลิ่น ทำให้ได้ความหวานจากฟักทองจริงๆ
-                ปั้นเป็นฟักทองลูกเล็กๆ น่ารักดี และเหมาะกับเทศกาล Halloween ค่ะ
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="khanom-kho" class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/ขนมโคกะทิ.jpg" alt="ขนมโคกะทิ ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>ขนมโคกะทิ</h3>
-              <p class="lead">
-                ขนมโคกะทิ เป็น signature dish ของทางร้านค่ะ ตัวขนมเป็นมะพร้าวขูดผัดกับน้ำตาลมะพร้าว
-                ห่อด้วยแป้งสีต่างๆ ต้มแล้วนำไปแช่ในหัวกะทิ จะให้อร่อยต้องผัดให้ไส้หวานๆเยิ้มๆไม่แห้ง
-                ซึ่งลูกๆหลานๆบอกว่าเป็นการ “เพิ่มความฟิน” เวลากัดเข้าไปในตัวขนมค่ะ
-              </p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="khanom-kho" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/ขนมมัน.jpg" alt="ขนมมัน ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>ขนมมัน</h3>
-              <p class="lead">
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ขนมมัน.jpg" alt="ขนมมัน ขนมไทย ใบไม้พระจันทร์">
+                <h3>ขนมมัน</h3>
+                <p class="lead">
                 ทำจากมันสำปะหลังนึ่ง เป็นขนมทานเล่นและทานเพลินเช่นเดียวกับหยกมณีค่ะ
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="khanom-kho" class="content-section-b">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/ตะโก้สาคู.jpg" alt="ตะโก้สาคู ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>ตะโก้สาคู</h3>
-              <p class="lead">
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ตะโก้สาคู.jpg" alt="ตะโก้สาคู ขนมไทย ใบไม้พระจันทร์">
+                <h3>ตะโก้สาคู</h3>
+                <p class="lead">
                 ทำจากสาคูกวนกับใบเตย ใส่ข้าวโพดกรอบๆ ราดหน้าด้วยกะทิเค็มๆ มันๆ ทานทีละถ้วยอร่อยดีค่ะ
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="khanom-kho" class="content-section-a">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 ml-auto order-lg-1">
-              <img class="img-fluid" src="img/indiv/เปียกปูนกะทิสด.jpg" alt="เปียกปูนกะทิสด ขนมไทย ใบไม้พระจันทร์">
-            </div>
-            <div class="col-lg-5 mr-auto order-lg-2" align="left">
-              <h3>เปียกปูนกะทิสด</h3>
-              <p class="lead">
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/เปียกปูนกะทิสด.jpg" alt="เปียกปูนกะทิสด ขนมไทย ใบไม้พระจันทร์">
+                <h3>เปียกปูนกะทิสด</h3>
+                <p class="lead">
                 เป็นเปียกปูนสมัยใหม่ เนื้อเปียกปูนเหนียวนุ่มหนุบหนับ หอมกลิ่นใบเตย ทานกับกะทิเค็มๆ
                 มันๆ และโรยงาหอมๆ เป็นขนมอีกอย่างที่ทั้งเด็กและผู้ใหญ่ชอบค่ะ
-              </p>
+                </p>
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/กล้วยหักมุกเชื่อม.jpg" alt="กล้วยหักมุกเชื่อม ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/กล้วยน้ำว้าเชื่อม.jpg" alt="กล้วยน้ำว้าเชื่อม ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/กล้วยไข่เชื่อม.jpg" alt="กล้วยไข่เชื่อม ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ผลไม้.jpg" alt="ผลไม้ ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ฝอยทอง.jpg" alt="ฝอยทอง ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/วุ้นกาแฟ.jpg" alt="วุ้นกาแฟ ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/วุ้นกะทิ.jpg" alt="วุ้นกะทิ ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/วุ้นลิ้นจี่.jpg" alt="วุ้นลิ้นจี่ ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/มันสำปะหลังเชื่อม.jpg" alt="มันสำปะหลังเชื่อม ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ขนมต้มขาว.jpg" alt="ขนมต้มขาว ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ข้าวเหนียวดำสังขยา.jpg" alt="ข้าวเหนียวดำสังขยา ขนมไทย ใบไม้พระจันทร์">
+              </div>
+            </div>
+            <div class="p-2 my-flex-item">
+              <div>
+                <img class="img-fluid" src="img/indiv/ข้าวเหนียวหน้ากุ้ง.jpg" alt="ข้าวเหนียวหน้ากุ้ง ขนมไทย ใบไม้พระจันทร์">
+              </div>
             </div>
           </div>
         </div>
@@ -589,7 +648,7 @@
           </div>
           <div class="column">
             <div class="content">
-              <a target="_blank" href="savory6-pics.html">
+              <a target="_blank" href="savory5-pics.html">
                 <div class="card">
                   <img src="img\indiv\กระทงทอง.jpg" alt="จัดเลี้ยง ใบไม้พระจันทร์" style="width:100%">
                   <div class="container">
@@ -776,7 +835,7 @@
           </div>
           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
           class="twitter-share-button"
-          data-url="https://www.baimaiprachan.com/"
+          data-url="https://www.baimaiprachan.com/thai-desserts-pics.html"
           data-via="baimaiprachan"
           data-show-count="false">
           TweetNow</a>
