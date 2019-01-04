@@ -85,6 +85,12 @@
             $('html, body').animate({
                 scrollTop: $("#catering-buffet").offset().top-50
             }, 500);
+            $("#catering-buffet-btn-subs").toggle();
+            //$('#buffer').toggle(function () {
+            //    $("#buffer").removeClass("sub-visible");
+            //}, function () {
+            //    $("#buffer").addClass("sub-visible");
+            //});
         });
         $("#sample-menus-btn").click(function() {
             $('html, body').animate({
@@ -144,6 +150,14 @@
       });
     </script>
 
+    <!--script>
+      $(document).ready(function(){
+        $("#catering-buffet-btn").click(function(){
+          $("#catering-buffet-btn-subs").toggle();
+        });
+      });
+    </script-->
+
   </head>
 
   <body>
@@ -166,15 +180,20 @@
             <a class="nav-link" id="in-the-news-btn">ในข่าว</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="catering-buffet-btn">จัดเลี้ยง +</a>
-            <ul class="nav-link">
+            <a class="nav-link" id="catering-buffet-btn">จัดเลี้ยง <i class="fa fa-caret-down"></i></a>
+            <ul class="nav-link" id="catering-buffet-btn-subs">
               <a class="nav-link-sub" id="sample-menus-btn"><li>ตัวอย่างราคาจัดเลี้ยง</li></a>
               <a class="nav-link-sub" id="mains-btn"><li>อาหารคาว</li></a>
               <a class="nav-link-sub" id="desserts-btn"><li>ของหวาน</li></a>
               <a class="nav-link-sub" id="alms-btn"><li>เลี้ยงพระ</li></a>
-              <a class="nav-link-sub" id="menupdf-btn" target="_blank" href="documents/รายการอาหารจัดเลี้ยง_ใบไม้พระจันทร์.pdf"><li>ดาวโหลดเมนู</li></a>
+              <a class="nav-link-sub" id="menupdf-btn" target="_blank"
+              href="documents/รายการอาหารจัดเลี้ยง_ใบไม้พระจันทร์.pdf"><li>ดาวโหลดเมนู</li></a>
             </ul>
           </li>
+          <!--li class="nav-item">
+            <span id="buffer"></span>
+            Problem: this is displaying as inline instead of block
+          </li-->
           <li class="nav-item">
             <a class="nav-link" id="restaurant-btn">ร้านอาหาร</a>
           </li>
@@ -335,92 +354,6 @@
 
     <section id="sample-menus" class="content-section-a" style="padding: 0px 0px 50px 0px;">
       <div class="container">
-        <!--ul class="nav nav-tabs justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#menu1">
-              <h4 class="section-heading">รายการตัวอย่าง 1</h4>
-              <p class="lead" style="line-height: 0px;">(180 บ.ต่อท่าน - 50 ท่าน)<br></p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu2">
-              <h4 class="section-heading">รายการตัวอย่าง 2</h4>
-              <p class="lead" style="line-height: 0px;">(200 บ.ต่อท่าน - 50 ท่าน)<br></p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu3">
-              <h4 class="section-heading">รายการตัวอย่าง 3</h4>
-              <p class="lead" style="line-height: 0px;">(225 บ.ต่อท่าน - 50 ท่าน)<br></p>
-            </a>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <div class="tab-pane container active" id="menu1">
-            <div class="row">
-              <div class="col-lg-5">
-                <p class="lead">
-                  <u>อาหารคาว</u><br>
-                  1.	แกงรัญจวน<br>
-                  2.	ยำโน่นนิดนี่หน่อย<br>
-                  3.	กุ้งพันอ้อย<br>
-                  4.	ไก่กรอบมะนาว<br>
-                  5.	เมี่ยงกลีบบัว<br>
-                  ข้าวสวย<br>
-                  <br>
-                  <u>ของหวาน</u><br>
-                  1.	ขนมเหนียว<br>
-                  2.	เค้กชอคโกแล็ตหน้านิ่ม<br>
-                  <br>
-                  ภาชนะอุ่นอาหาร<br>
-                  จาน ชาม ช้อนส้อม<br>
-                  น้ำเปล่า น้ำแข็ง แก้วน้ำ<br>
-                  โต๊ะบุฟเฟต์<br>
-                  พนักงานบริการ<br>
-                  บริการจัดตั้ง เก็บของ
-                </p>
-              </div>
-              <div class="col-lg-5">
-                <div class="row">
-                  <div class="col" style="padding: 0px">
-                    <span data-toggle="modal" data-target="#indivDishModal" data-id="เมี่ยงกลีบบัว">
-                      <img class="img-fluid" src="img/indiv/เมี่ยงกลีบบัว.jpg" alt="เมี่ยงกลีบบัว" style="padding: 5px">
-                    </span>
-                    <span data-toggle="modal" data-target="#indivDishModal" data-id="แกงรัญจวน">
-                      <img class="img-fluid" src="img/indiv/แกงรัญจวน.jpg" alt="แกงรัญจวน" style="padding: 5px">
-                    </span>
-                  </div>
-                  <div class="col" style="padding: 0px">
-                    <span data-toggle="modal" data-target="#indivDishModal" data-id="กุ้งพันอ้อย">
-                      <img class="img-fluid" src="img/indiv/กุ้งพันอ้อย.jpg" alt="กุ้งพันอ้อย" style="padding: 5px">
-                    </span>
-                    <span data-toggle="modal" data-target="#indivDishModal" data-id="ไก่กรอบมะนาว">
-                      <img class="img-fluid" src="img/indiv/ไก่กรอบมะนาว.jpg" alt="ไก่กรอบมะนาว" style="padding: 5px">
-                    </span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col" style="padding: 0px">
-                    <span data-toggle="modal" data-target="#indivDishModal" data-id="ขนมเหนียว">
-                      <img class="img-fluid" src="img/indiv/ขนมเหนียว.jpg" alt="ขนมเหนียว" style="padding: 5px">
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane container fade" id="menu2">
-            <h2 class="section-heading">รายการ 2</h2>
-            <p class="lead" style="line-height: 0px;">(180 บ.ต่อท่าน - 50 ท่าน)<br></p>
-            <div class="clearfix"></div>
-          </div>
-          <div class="tab-pane container fade" id="menu3">
-            <h2 class="section-heading">รายการ 3</h2>
-            <p class="lead" style="line-height: 0px;">(180 บ.ต่อท่าน - 50 ท่าน)<br></p>
-            <div class="clearfix"></div>
-          </div>
-        </div-->
         <div class="col-lg-12 ml-auto"  align="center">
           <h2 class="section-heading">ตัวอย่างราคาจัดเลี้ยง</h2>
           <hr class="section-heading-spacer-c" style="width: 300px;">
@@ -675,7 +608,6 @@
                   &bull; น้ำตกหมู<br>
                   &bull; น้ำพริกกะปิ<br>
                   &bull; น้ำพริกกุ้งสด<br>
-                  &bull; ยำปลาทอดผลไม้<br>
                   &bull; ปลาทอดสมุนไพร<br>
                   &bull; ปลาผัดพริกไทยดำ<br>
                   &bull; เป็ดผัดพริกไทยดำ<br>
@@ -690,12 +622,13 @@
                   &bull; ยำคะน้ากุ้ง<br>
                   &bull; ยำทวาย<br>
                   &bull; ยำทะเล<br>
-                  &bull; ยำเนื้อย่าง
+                  &bull; ยำเนื้อย่าง<br>
+                  &bull; ยำโน่นนิดนี่หน่อย
                 </p>
               </div>
               <div class="col">
                 <p class="lead" align="center">
-                  &bull; ยำโน่นนิดนี่หน่อย<br>
+                  &bull; ยำปลาทอดผลไม้<br>
                   &bull; ยำเป็ดพะโล้<br>
                   &bull; ยำผลไม้<br>
                   &bull; ยำผักบุ้งทอด<br>
@@ -874,7 +807,7 @@
               </div>
               <div class="col">
                 <p class="lead" align="center">
-                  &bull; ปลาซอสมะขาม<br>
+                  &bull; ปลาทอดซอสมะขาม<br>
                   &bull; ปลานึ่งมะนาว<br>
                   &bull; ปลาแป๊ะซ่ะ<br>
                   &bull; ปลาหมึกสอดไส้ทอดกระเทียม<br>
@@ -1400,7 +1333,7 @@
               <a href="#gallery">ดูรูป</a>
             </li>
           </ul>
-          <p class="copyright text-muted small">Copyright &copy; Baimaiprachan 2017. All Rights Reserved</p>
+          <p class="copyright text-muted small">Copyright &copy; Baimaiprachan 2019. All Rights Reserved</p>
         </div>
 
 
